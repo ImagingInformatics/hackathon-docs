@@ -13,7 +13,7 @@ Don't forget to join the conversation on [Slack](https://join.slack.com/t/siimha
 
 For inspiration of ideas to implement, check this [list of hackathon project ideas](https://docs.google.com/document/d/1E8txiKck5jxTEzJ2FadaMKnwJoZNkgYuUUa69sDY9xY/edit?usp=sharing).
 
-
+You can also take time to familiarize yourself with the [Hackathon Server](./hackathon-server.md) and its APIs. As well as [resources of interest](../apis/other-apis-and-standards.md).
 
 
 ## Questions? Problems?

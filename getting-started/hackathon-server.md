@@ -27,6 +27,8 @@ When making requests against the end points below, ensure you include an HTTP he
 * Endpoint: `https://hackathon.siim.org/sole/`
 * Check out the [Profile text](https://wiki.ihe.net/index.php/Standardized_Operational_Log_of_Events_(SOLE)) and [Github project](https://github.com/mohannadhussain/ihe-sole-repo) for information on how to use the API and event submission samples.
 
+## See also
+* [Resources of Interest](../apis/other-apis-and-standards.md) - other APIs, Libraries, etc.
+* [Datasets](../miscellaneous/data-sets.md) - Openly available datasets in medical imaging.
 
-
-**Tip**: If your prefer testing right from within your browser, you can use an extension like [ModHeader for Chrome](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=en) to send your API key via HTTP headers.
+**Tip**: If your prefer testing right from within your browser, you can use an extension like [ModHeader](./mod-header.md) to send your API key via HTTP headers.
