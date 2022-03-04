@@ -39,10 +39,10 @@ You can LOINC content programmatically. Their server uses the terminology servic
 ### [Radiology Gamuts Ontology API](http://www.gamuts.net/dev/)
 The Gamuts.net site provides a REST API to aid developers in using Radiology Gamuts Ontology information.
 
-### [RadReport API](tp://www.radreport.org/dev/)
+### [RadReport API](http://www.radreport.org/dev/)
 The Radreport.org site provides an API to aid developers in accessing structured report templates. The API provides a REST interface, which responds with JSON.
 
-###  [RSNA RadLex Playbook](hthttp://playbook.radlex.org/playbook/SearchRadlexAction)
+###  [RSNA RadLex Playbook](http://playbook.radlex.org/playbook/SearchRadlexAction)
 RadLex Playbook is a project of the Radiological Society of North America (RSNA), and constitutes a portion of the [RadLex ontology](http://radlex.org/). Playbook aims to provide a standard system for naming radiology procedures, based on the elements which define an imaging exam such as modality and body part. By providing standard names and codes for radiologic studies, Playbook is intended to facilitate a variety of operational and quality improvement efforts, including workflow optimization, chargemaster management, radiation dose tracking, enterprise integration and image exchange.
 
 The RadLEx Playbook User Guide can be found here in PDF format: 
