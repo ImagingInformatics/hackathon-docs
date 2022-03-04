@@ -27,20 +27,20 @@ If you want to control the format of the server response, add an `Accept` header
 
 **NOTE:** When you choose XML, DICOMweb retuns results in `multipart` format, which is used to combine multilple objets into one response. Read more about multipart at https://pspdfkit.com/blog/2021/a-brief-tour-of-multipart-requests/ and https://swagger.io/docs/specification/describing-request-body/multipart-requests/.
 
-### 4. Download DICOM Images
+## 4. Download DICOM Images
 And once you've done that, select an image to download from the response, extract the series UID and instance UID from the response and you can download the **DICOM** image by making a subsequent WADO-RS query: 
 ```https://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.4792.2001.103189108764313019491934667255/series/1.3.6.1.4.1.14519.5.2.1.4792.2001.104616474240757574154876423123/instances/1.3.6.1.4.1.14519.5.2.1.4792.2001.267212981954448819074140522716```
  
 Ensure your request includes a header that specifies the return type, i.e.
 `Accept: application/dicom`
 
-### 5. View Images in JPEG/PNG
+## 5. View Images in JPEG/PNG
 
 Add `/frames/1/rendered` to the URL from the last step, and change your `Accept` header to either `image/jpeg` or `image/png`. Here's the full URL:
 
 ```http://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.7777.9002.198875685720513246512710453733/series/1.3.6.1.4.1.14519.5.2.1.7777.9002.207203214132667549392101803048/instances/1.3.6.1.4.1.14519.5.2.1.7777.9002.327873213718058651550666129029/frames/1/rendered```
 
-### 6. Using WADO-URL instead of WADO-RS
+## 6. Using WADO-URL instead of WADO-RS
 If you are working with a server that does not support DICOMweb, you can retrieve images (as DICOM, or rendered JPEG/PNG) using the older WADO-URL standard. For example:
 ```https://hackathon.siim.org/wadouri/?requestType=WADO&studyUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.103189108764313019491934667255&seriesUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.104616474240757574154876423123&objectUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.267212981954448819074140522716```
  
