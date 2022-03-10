@@ -14,7 +14,7 @@ When making requests against the end points below, ensure you include an HTTP he
 `apikey: [your API key]`
 ## FHIR: 
 * Endpoint: `https://hackathon.siim.org/fhir/`
-* Overview of FHIR objects/resources at: https://hackathon.siim.org/fhir-overview/
+* Overview of FHIR objects/resources at: https://hackathon.siim.org/
 * Server powered by [HAPI FHIR](http://hapifhir.io/)
 
 ## DICOMweb: 

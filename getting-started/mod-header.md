@@ -11,4 +11,4 @@ Said browser plugins allow you to send specific headers to specific sites. Using
 * **Filters** To ensure your API is not to any other Internet website, add the following entries:
 `https://hackathon.siim.org/.*` and `http://hackathon.siim.org/.*`
 
-You now should be able to navigate to URLs like https://hackathon.siim.org/vna or https://hackathon.siim.org/fhir-overview and use them in your browser.
+You now should be able to navigate to URLs like https://hackathon.siim.org/ or https://hackathon.siim.org/vna and use them in your browser.
