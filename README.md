@@ -1,5 +1,5 @@
 # Hackathon Documentation
-Simple to follow examples of how to use FHIR, DICOMweb and other modern helathcare/medical imaging APIs
+Simple to follow examples of how to use FHIR, DICOMweb and other modern healthcare/medical imaging APIs
 
 # Getting started (start here if you are new)
 Read about the [SIIM Hackathon Server](getting-started/hackathon-server.md)
