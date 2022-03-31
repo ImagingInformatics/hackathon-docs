@@ -1,0 +1,21 @@
+site_name: SIIM Hackathon Documentation
+repo_url: https://github.com/ImagingInformatics/hackathon-docs/
+docs_dir: .
+theme:
+    name: readthedocs
+nav: 
+    - Getting Started: 
+        - Hackathon Event: getting-started/hackathon-event.md
+        - Hackathon Server: getting-started/hackathon-server.md
+        - ModHeader: getting-started/mod-header.md
+    - What's new:
+        - 2021: whats-new/2021.md
+    - APIs:
+        - FHIR Intro: apis/fhir-intro.md
+        - DICOMweb Intro: apis/dicom-web-intro.md
+        - DICOMweb STOW: apis/dicom-web-stow.md
+        - Other APIs/Standards: apis/other-apis-and-standards.md
+    - Miscellaneous:
+        - Data Sets: miscellaneous/data-sets.md
+plugins:
+  - same-dir
