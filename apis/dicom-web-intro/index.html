@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>DICOMweb Intro - SIIM Hackathon Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIIM Hackathon Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../getting-started/hackathon-event/" class="dropdown-item">Hackathon Event</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/hackathon-server/" class="dropdown-item">Hackathon Server</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/mod-header/" class="dropdown-item">ModHeader</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">What's new <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../whats-new/2021/" class="dropdown-item">2021</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">APIs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../fhir-intro/" class="dropdown-item">FHIR Intro</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">DICOMweb Intro</a>
+</li>
+                                    
+<li>
+    <a href="../dicom-web-stow/" class="dropdown-item">DICOMweb STOW</a>
+</li>
+                                    
+<li>
+    <a href="../other-apis-and-standards/" class="dropdown-item">Other APIs/Standards</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Miscellaneous <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../miscellaneous/data-sets/" class="dropdown-item">Data Sets</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../fhir-intro/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../dicom-web-stow/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#5-minute-dicomweb-starting-guide" class="nav-link">5-Minute DICOMweb Starting Guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#dicomweb-concepts" class="nav-link">DICOMweb Concepts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#1-a-hello-world-example" class="nav-link">1. A Hello World example</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2-get-study-information" class="nav-link">2. Get study information</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3-switch-return-format-between-xml-and-json" class="nav-link">3. Switch return format between XML and JSON</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4-download-dicom-images" class="nav-link">4. Download DICOM Images</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#5-view-images-in-jpegpng" class="nav-link">5. View Images in JPEG/PNG</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#6-using-wado-url-instead-of-wado-rs" class="nav-link">6. Using WADO-URL instead of WADO-RS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#beyond-simple-viewing" class="nav-link">Beyond simple viewing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#resources" class="nav-link">Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="5-minute-dicomweb-starting-guide">5-Minute DICOMweb Starting Guide</h1>
+<h2 id="dicomweb-concepts">DICOMweb Concepts</h2>
+<p>To get started with DICOMweb, there are a few key concepts to understand.
+* An imaging structure consists of a Patient (typically corresponds to a single "person"), a Study (typically corresponds to a single "diagnostic order"), a Series (typically corresponds to a single "imaging event" within a study, for example, multiple views, or with/without contrast), and an Instance (typically corresponds to a single image).
+* First, you must QUERY for studies and their underlying structure, using the QIDO-RS feature of DICOMweb.
+* Then, you can RETRIEVE individual instances for rendering, using the WADO-RS feature of DICOMweb.
+* If desired, you can STORE individual instances, using the STOW-RS feature of DICOMweb.</p>
+<h3 id="dont-forget">Don't forget...</h3>
+<p>When making requests against the end points below, ensure you include an HTTP header like so: 
+<code>apikey: [your API key]</code></p>
+<h2 id="1-a-hello-world-example">1. A Hello World example</h2>
+<p>A simple Hello World type query for DICOMweb, would look as follows, to query for all studies for all patients with the last name of <strong>SIIM</strong>: 
+<code>https://hackathon.siim.org/dicomweb/studies/?00100010=SIIM*</code></p>
+<p><strong>NOTE:</strong> If you having trouble formulating a QIDO request, an alternative way to discover patients/studies is to use Orthanc's web UI at: https://hackathon.siim.org/vna/</p>
+<h2 id="2-get-study-information">2. Get study information</h2>
+<p>Once you've picked a study to download, extract the study UID from the response and you can download its study structure by making a subsequent QIDO-RS query: 
+<code>https://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.4792.2001.103189108764313019491934667255/instances</code></p>
+<h2 id="3-switch-return-format-between-xml-and-json">3. Switch return format between XML and JSON</h2>
+<p>If you want to control the format of the server response, add an <code>Accept</code> header with <code>application/json</code> for JSON or <code>text/xml</code> for XML.</p>
+<p><strong>NOTE:</strong> When you choose XML, DICOMweb retuns results in <code>multipart</code> format, which is used to combine multilple objets into one response. Read more about multipart at https://pspdfkit.com/blog/2021/a-brief-tour-of-multipart-requests/ and https://swagger.io/docs/specification/describing-request-body/multipart-requests/.</p>
+<h2 id="4-download-dicom-images">4. Download DICOM Images</h2>
+<p>And once you've done that, select an image to download from the response, extract the series UID and instance UID from the response and you can download the <strong>DICOM</strong> image by making a subsequent WADO-RS query: 
+<code>https://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.4792.2001.103189108764313019491934667255/series/1.3.6.1.4.1.14519.5.2.1.4792.2001.104616474240757574154876423123/instances/1.3.6.1.4.1.14519.5.2.1.4792.2001.267212981954448819074140522716</code></p>
+<p>Ensure your request includes a header that specifies the return type, i.e.
+<code>Accept: application/dicom</code></p>
+<h2 id="5-view-images-in-jpegpng">5. View Images in JPEG/PNG</h2>
+<p>Add <code>/frames/1/rendered</code> to the URL from the last step, and change your <code>Accept</code> header to either <code>image/jpeg</code> or <code>image/png</code>. Here's the full URL:</p>
+<p><code>http://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.7777.9002.198875685720513246512710453733/series/1.3.6.1.4.1.14519.5.2.1.7777.9002.207203214132667549392101803048/instances/1.3.6.1.4.1.14519.5.2.1.7777.9002.327873213718058651550666129029/frames/1/rendered</code></p>
+<h2 id="6-using-wado-url-instead-of-wado-rs">6. Using WADO-URL instead of WADO-RS</h2>
+<p>If you are working with a server that does not support DICOMweb, you can retrieve images (as DICOM, or rendered JPEG/PNG) using the older WADO-URL standard. For example:
+<code>https://hackathon.siim.org/wadouri/?requestType=WADO&amp;studyUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.103189108764313019491934667255&amp;seriesUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.104616474240757574154876423123&amp;objectUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.267212981954448819074140522716</code></p>
+<p>The URL above returns DICOM. If you want a rendered JPEG or PND, simply add <code>&amp;contentType=image/jpeg</code> or <code>&amp;contentType=image/png</code> to your <strong>URL</strong> (not header) request.</p>
+<h2 id="beyond-simple-viewing">Beyond simple viewing</h2>
+<p>Interested in pushing data to the server? <a href="../dicom-web-stow/">This article</a> provides tips on how to do that using cURL, which can easily be adapted for use with other tools, like Postman.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>DICOMweb documentation: http://www.dicomweb.org/</li>
+<li>QIDO-RS: ftp://medical.nema.org/medical/dicom/final/sup166_ft5.pdf</li>
+<li>WADO-RS: ftp://medical.nema.org/medical/dicom/final/sup161_ft.pdf</li>
+<li>STOW-RS: ftp://medical.nema.org/medical/dicom/Final/sup163_ft3.pdf</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

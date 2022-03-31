@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Other APIs/Standards - SIIM Hackathon Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SIIM Hackathon Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../getting-started/hackathon-event/" class="dropdown-item">Hackathon Event</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/hackathon-server/" class="dropdown-item">Hackathon Server</a>
+</li>
+                                    
+<li>
+    <a href="../../getting-started/mod-header/" class="dropdown-item">ModHeader</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">What's new <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../whats-new/2021/" class="dropdown-item">2021</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">APIs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../fhir-intro/" class="dropdown-item">FHIR Intro</a>
+</li>
+                                    
+<li>
+    <a href="../dicom-web-intro/" class="dropdown-item">DICOMweb Intro</a>
+</li>
+                                    
+<li>
+    <a href="../dicom-web-stow/" class="dropdown-item">DICOMweb STOW</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Other APIs/Standards</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Miscellaneous <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../miscellaneous/data-sets/" class="dropdown-item">Data Sets</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../dicom-web-stow/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../miscellaneous/data-sets/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#other-noteworthy-apis-standards-and-utilities" class="nav-link">Other noteworthy APIs, Standards and Utilities</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cant-get-enough-of-this-api-goodness" class="nav-link">Can't get enough of this API goodness?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="other-noteworthy-apis-standards-and-utilities">Other noteworthy APIs, Standards and Utilities</h1>
+<p><strong>Note</strong> If you are participaing in the SIIM Hackathon, you could get bonus points if your project incorporates emerging standards such as there below!</p>
+<ul>
+<li>
+<p><a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_AIR_Rev1-0_PC_2020-03-10.pdf">IHE AI Results (AIR)</a></p>
+</li>
+<li>
+<p><a href="https://wiki.ihe.net/index.php/Imaged-_Based_AI_Workflow_-_Brief_Proposal">AI Workflow for Imaging (AIW-I)</a> - Hint: Use the <a href="../../whats-new/2021/">AI Orchestrator</a>.</p>
+</li>
+<li>
+<p><a href="http://fhircast.org/">FHIRcast</a> - Check out their <a href="https://github.com/fhircast/sandbox">reference implementation</a> plus the <a href="https://github.com/fhircast/sandbox.js">NodeJS port</a>.</p>
+</li>
+<li>
+<p>Scan your code using SonarQube and include summaries of your findings (and things you learnt) in your showcase presentation (high-level overview, no need for detailed information or code samples).</p>
+</li>
+<li>
+<p>Even more bonus points if you are able to open-source your project code :)</p>
+</li>
+</ul>
+<h2 id="cant-get-enough-of-this-api-goodness">Can't get enough of this API goodness?</h2>
+<p>Here are some additional APIs and utilities that could help you create the ultimate mashup:</p>
+<h3 id="open-health-imaging-foundation-ohif"><a href="http://ohif.org/">Open Health Imaging Foundation (OHIF)</a></h3>
+<p>The Open Health Imaging Foundation is developing an open source framework for constructing web-based medical imaging applications. The application framework is built using modern HTML/CSS/JavaScript and uses <a href="https://cornerstonejs.org/">Cornerstone</a> at its core to display and manipulate medical images. It is built with Meteor, a Node.js-based full-stack JavaScript platform.</p>
+<p>PS: Check out their awesome web-based DICOM viewer.</p>
+<h3 id="static-wado-rs-generator"><a href="https://github.com/OHIF/static-wado">Static WADO-RS Generator</a></h3>
+<p>Allows you to simulate a DICOMweb server using static content, i.e. you would only need a simple HTTP server instead of a PACS system.</p>
+<p>There are two versions: <a href="https://github.com/OHIF/static-wado-java">Java</a> and <a href="https://github.com/OHIF/static-wado-js">Javascript</a></p>
+<h3 id="synthea-synthetic-patient-generation"><a href="https://synthetichealth.github.io/synthea/">Synthea Synthetic Patient Generation</a></h3>
+<p>Synthea is an open-source, synthetic patient generator that models the medical history of synthetic patients. Our mission is to provide high-quality, synthetic, realistic but not real, patient data and associated health records covering every aspect of healthcare. The resulting data is free from cost, privacy, and security restrictions, enabling research with Health IT data that is otherwise legally or practically unavailable.</p>
+<h3 id="vonk-loader"><a href="https://simplifier.net/downloads/vonkloader">Vonk Loader</a></h3>
+<p>Vonk Loader is a command line tool to bulk load resources into a FHIR server. Vonk Loader works on Windows, Linux and macOS.</p>
+<h3 id="fhir-resource-editor-fred"><a href="http://docs.smarthealthit.org/fred/">FHIR Resource Editor (FRED)</a></h3>
+<p>Allows construction of FHIR object using a convenient user interface.</p>
+<h3 id="loinc-fhir-terminology-server"><a href="https://loinc.org/fhir/">LOINC FHIR Terminology Server</a></h3>
+<p>You can LOINC content programmatically. Their server uses the terminology services defined by HL7's FHIR standard.</p>
+<h3 id="radiology-gamuts-ontology-api"><a href="http://www.gamuts.net/dev/">Radiology Gamuts Ontology API</a></h3>
+<p>The Gamuts.net site provides a REST API to aid developers in using Radiology Gamuts Ontology information.</p>
+<h3 id="radreport-api"><a href="http://www.radreport.org/dev/">RadReport API</a></h3>
+<p>The Radreport.org site provides an API to aid developers in accessing structured report templates. The API provides a REST interface, which responds with JSON.</p>
+<h3 id="rsna-radlex-playbook"><a href="http://playbook.radlex.org/playbook/SearchRadlexAction">RSNA RadLex Playbook</a></h3>
+<p>RadLex Playbook is a project of the Radiological Society of North America (RSNA), and constitutes a portion of the <a href="http://radlex.org/">RadLex ontology</a>. Playbook aims to provide a standard system for naming radiology procedures, based on the elements which define an imaging exam such as modality and body part. By providing standard names and codes for radiologic studies, Playbook is intended to facilitate a variety of operational and quality improvement efforts, including workflow optimization, chargemaster management, radiation dose tracking, enterprise integration and image exchange.</p>
+<p>The RadLEx Playbook User Guide can be found here in PDF format: 
+http://playbook.radlex.org/playbook-user-guide.pdf?newfile=1</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
