@@ -5,6 +5,8 @@
 
 * [AI Workflow for Imaging (AIW-I)](https://wiki.ihe.net/index.php/Imaged-_Based_AI_Workflow_-_Brief_Proposal) - Hint: Use the [AI Orchestrator](../whats-new/2021.md).
 
+* [IHE Whitepaper - AI Interoperability in Imaging](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_White_Paper_AI_Interoperability_in_Imaging_Rev1-0_PC_2021-03-12.pdf)
+
 * [FHIRcast](http://fhircast.org/) - Check out their [reference implementation](https://github.com/fhircast/sandbox) plus the [NodeJS port](https://github.com/fhircast/sandbox.js).
 
 * Scan your code using SonarQube and include summaries of your findings (and things you learnt) in your showcase presentation (high-level overview, no need for detailed information or code samples).
