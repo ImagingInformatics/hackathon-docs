@@ -3,9 +3,15 @@
 ## FHIR Concepts
 All FHIR calls are based on retrieving resources. There are many different types of resources for data you would like to retrieve, including patient information, orders, reports, results, and more.
 
+## Prerequesities
+1. [SIIM Hackathon API key](../getting-started/hackathon-server.md)
+2. (Optional) [Postman](https://www.postman.com/)
+
 ### Don't forget...
 When making requests against the end points below, ensure you include an HTTP header like so: 
 `apikey: [your API key]`
+
+If you don't have a SIIM Hackathon API key, see [Hackathon Server](../getting-started/hackathon-server.md).
 
 ## 1. A Hello World example
 A simple Hello World type query for FHIR, would look as follows, to query for all patients with the last name of **SIIM**: 
