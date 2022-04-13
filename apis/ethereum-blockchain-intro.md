@@ -17,7 +17,7 @@
 1. Launch Postman
 2. Create a new request
 3. Click the `GET` dropdown next to the URL, and change it to `POST`
-4. Set the request URL to `https://hackathon.siim.org/ethereum/`
+4. Set the request URL to `http://hackathon.siim.org/ethereum/` **NOTE http NOT https**
 5. Click the `Headers` tab (under the URL) and set the following headers:
     A. `apikey` with a value of your SIIM Hackathon API Key
     B. `Content-Type` with a value of `application/json`
@@ -74,12 +74,12 @@ Just like step 2, but with this API call instead:
     "id": 4,
     "method": "eth_getBalance",
     "params": [
-        "0x08d1f47128f5c04d7a4aee69e90642645059acd6",
+        "0x0000000000000000000000000000000000000001",
         "latest"
     ]
 }
 ```
-You can check the balance of other accounts by replacing `0x08d1f47128f5c04d7a4aee69e90642645059acd6` with another account identifier.
+**NOTE** The call above checks the balance of account number `0x0000000000000000000000000000000000000001` specifically. If you want to check another account, replace that value with another account number seen in the response from the previous step.
 
 
 ## Resources
