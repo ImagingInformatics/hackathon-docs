@@ -134,7 +134,7 @@
 <li>Launch Postman</li>
 <li>Create a new request</li>
 <li>Click the <code>GET</code> dropdown next to the URL, and change it to <code>POST</code></li>
-<li>Set the request URL to <code>https://hackathon.siim.org/ethereum/</code></li>
+<li>Set the request URL to <code>http://hackathon.siim.org/ethereum/</code> <strong>NOTE http NOT https</strong></li>
 <li>Click the <code>Headers</code> tab (under the URL) and set the following headers:
     A. <code>apikey</code> with a value of your SIIM Hackathon API Key
     B. <code>Content-Type</code> with a value of <code>application/json</code></li>
@@ -179,12 +179,12 @@
     &quot;id&quot;: 4,
     &quot;method&quot;: &quot;eth_getBalance&quot;,
     &quot;params&quot;: [
-        &quot;0x08d1f47128f5c04d7a4aee69e90642645059acd6&quot;,
+        &quot;0x0000000000000000000000000000000000000001&quot;,
         &quot;latest&quot;
     ]
 }
 </code></pre>
-<p>You can check the balance of other accounts by replacing <code>0x08d1f47128f5c04d7a4aee69e90642645059acd6</code> with another account identifier.</p>
+<p><strong>NOTE</strong> The call above checks the balance of account number <code>0x0000000000000000000000000000000000000001</code> specifically. If you want to check another account, replace that value with another account number seen in the response from the previous step.</p>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://medium.com/scb-digital/running-a-private-ethereum-blockchain-using-docker-589c8e6a4fe8">Running a Private Ethereum Blockchain using Docker</a></li>
