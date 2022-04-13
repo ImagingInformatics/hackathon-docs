@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Ethereum Intro - SIIM Hackathon Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Ethereum Intro";
+        var mkdocs_page_input_path = "apis/ethereum-blockchain-intro.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> SIIM Hackathon Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/hackathon-event/">Hackathon Event</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/hackathon-server/">Hackathon Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/mod-header/">ModHeader</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">What's new</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../whats-new/2022/">2022</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../whats-new/2021/">2021</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">APIs</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../fhir-intro/">FHIR Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dicom-web-intro/">DICOMweb Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dicom-web-stow/">DICOMweb STOW</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Ethereum Intro</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basic-concepts">Basic Concepts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequesities">Prerequesities</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-set-up">1. Set up</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-check-the-list-of-nodespeers">2. Check the list of nodes/peers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-get-the-latest-block-number">3. Get the latest block number</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-get-the-list-of-accounts">4. Get the list of accounts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-get-the-balance-of-an-account">5. Get the balance of an account</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../other-apis-and-standards/">Other APIs/Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/data-sets/">Data Sets</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">SIIM Hackathon Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>APIs &raquo;</li><li>Ethereum Intro</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/ethereum-blockchain-intro.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="5-minute-ethereum-starting-guide">5-Minute Ethereum Starting Guide</h1>
+<h2 id="basic-concepts">Basic Concepts</h2>
+<ul>
+<li>Ethereum is one implementation of Blockchain, others exist, too, like BitCoin.</li>
+<li>Although most Blockchain implementations focus on monetary transactions, they support other concepts like <a href="https://en.wikipedia.org/wiki/Non-fungible_token">NFT</a>.</li>
+<li>We believe Blockchain has a role to play in improving healthcare record storage due to its write-once, read-many time nature.</li>
+<li>Some sample healthcare application ideas: </li>
+<li>Initiation and verification of physician credentialing</li>
+<li>Vaccine certification and verification</li>
+</ul>
+<h2 id="prerequesities">Prerequesities</h2>
+<ol>
+<li><a href="../../getting-started/hackathon-server/">SIIM Hackathon API key</a></li>
+<li><a href="https://www.postman.com/">Postman</a></li>
+</ol>
+<h2 id="1-set-up">1. Set up</h2>
+<ol>
+<li>Launch Postman</li>
+<li>Create a new request</li>
+<li>Click the <code>GET</code> dropdown next to the URL, and change it to <code>POST</code></li>
+<li>Set the request URL to <code>https://hackathon.siim.org/ethereum/</code></li>
+<li>Click the <code>Headers</code> tab (under the URL) and set the following headers:
+    A. <code>apikey</code> with a value of your SIIM Hackathon API Key
+    B. <code>Content-Type</code> with a value of <code>application/json</code></li>
+<li>Click the <code>Body</code> tab (under the URL) and select <code>Raw</code> then change the <code>Text</code> dropdown that appeared on the right to <code>JSON</code></li>
+<li>The empty white space below is where you will copy/paste the API calls seen below</li>
+</ol>
+<h2 id="2-check-the-list-of-nodespeers">2. Check the list of nodes/peers</h2>
+<p>This is useful to know the size of the network, i.e. the number of entities actively connected to it (Hint: our network is private so it should be one).</p>
+<p>Copy/paste the following API call in the Request Body, then hit the blue <code>Send</code> button. You should see results in the <code>Response</code> pane.</p>
+<pre><code>{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 1,
+    &quot;method&quot;: &quot;admin_peers&quot;,
+    &quot;params&quot;: []
+}
+</code></pre>
+<h2 id="3-get-the-latest-block-number">3. Get the latest block number</h2>
+<p>This tells us how long the "chain" is in this network, which provides an idea of how many transactions have taken place.</p>
+<p>Just like step 2, but with this API call instead:</p>
+<pre><code>{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 2,
+    &quot;method&quot;: &quot;eth_blockNumber&quot;,
+    &quot;params&quot;: []
+}
+</code></pre>
+<h2 id="4-get-the-list-of-accounts">4. Get the list of accounts</h2>
+<p>Just like you can have multiple accounts with a bank, the same concept applies here, too. This call lists all known accounts</p>
+<p>Just like step 2, but with this API call instead:</p>
+<pre><code>{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 3,
+    &quot;method&quot;: &quot;eth_accounts&quot;,
+    &quot;params&quot;: []
+}
+</code></pre>
+<h2 id="5-get-the-balance-of-an-account">5. Get the balance of an account</h2>
+<p>Just like checking the balance on your real-life bank account, except in Ethereum the balance is in <a href="https://www.google.com/search?q=hexadecimal+to+decimal+converter">hexadecimal</a> number and in <a href="https://ethdocs.org/en/latest/ether.html">wei unit</a>.</p>
+<p>Just like step 2, but with this API call instead:</p>
+<pre><code>{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 4,
+    &quot;method&quot;: &quot;eth_getBalance&quot;,
+    &quot;params&quot;: [
+        &quot;0x08d1f47128f5c04d7a4aee69e90642645059acd6&quot;,
+        &quot;latest&quot;
+    ]
+}
+</code></pre>
+<p>You can check the balance of other accounts by replacing <code>0x08d1f47128f5c04d7a4aee69e90642645059acd6</code> with another account identifier.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://medium.com/scb-digital/running-a-private-ethereum-blockchain-using-docker-589c8e6a4fe8">Running a Private Ethereum Blockchain using Docker</a></li>
+<li><a href="https://ethereum.org/en/">Ethereum Homepage</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../dicom-web-stow/" class="btn btn-neutral float-left" title="DICOMweb STOW"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../other-apis-and-standards/" class="btn btn-neutral float-right" title="Other APIs/Standards">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ImagingInformatics/hackathon-docs/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../dicom-web-stow/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../other-apis-and-standards/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
