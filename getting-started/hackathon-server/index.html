@@ -109,6 +109,7 @@
 <h1 id="using-the-siim-hackathon-server">Using the SIIM Hackathon Server</h1>
 <p>When making requests against the end points below, ensure you include an HTTP header like so:
 <code>apikey: [your API key]</code></p>
+<p>We recommend using <a href="https://www.postman.com/">Postman</a> for working with RESTful APIs, such as FHIR and DICOMweb. You can use Postman to get your API calls working, then Postman can export into code in your favourite language (Python, Javascript, etc.)</p>
 <h2 id="fhir">FHIR:</h2>
 <ul>
 <li>Endpoint: <code>https://hackathon.siim.org/fhir/</code></li>
@@ -126,6 +127,10 @@
 <ul>
 <li>Endpoint: <code>https://hackathon.siim.org/sole/</code></li>
 <li>Check out the <a href="https://wiki.ihe.net/index.php/Standardized_Operational_Log_of_Events_(SOLE)">Profile text</a> and <a href="https://github.com/mohannadhussain/ihe-sole-repo">Github project</a> for information on how to use the API and event submission samples.</li>
+</ul>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>The server resets itself every day at 3am Eastern Time. The process can take up to 10 minutes where some services and/or data may not be available.</li>
 </ul>
 <h2 id="see-also">See also</h2>
 <ul>
