@@ -6,7 +6,7 @@ Secondly, don't forget to join the conversation on [Slack](https://join.slack.co
 ## New to REST APIs?
 Check out this [Primer on REST APIs](https://siim.org/resource/resmgr/hackathon/SIIM2014_REST_Primer.pdf).
 
-Wondering what's all this hype about the new standards - check our [60-second starting guide for FHIR](../apis/fhir-intro.md) as well as [starting guide for DICOMweb](../apis/dicom-web-intro.md). You won't believe how easy and quick it is to get started!
+Wondering what's all this hype about the new standards - check our [5-minute starting guide for FHIR](../apis/fhir-intro.md) as well as [starting guide for DICOMweb](../apis/dicom-web-intro.md). You won't believe how easy and quick it is to get started!
 
 # Using the SIIM Hackathon Server
 
