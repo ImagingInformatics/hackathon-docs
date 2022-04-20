@@ -12,6 +12,10 @@ Wondering what's all this hype about the new standards - check our [60-second st
 
 When making requests against the end points below, ensure you include an HTTP header like so:
 `apikey: [your API key]`
+
+We recommend using [Postman](https://www.postman.com/) for working with RESTful APIs, such as FHIR and DICOMweb. You can use Postman to get your API calls working, then Postman can export into code in your favourite language (Python, Javascript, etc.)
+
+
 ## FHIR: 
 * Endpoint: `https://hackathon.siim.org/fhir/`
 * Overview of FHIR objects/resources at: https://hackathon.siim.org/
@@ -26,6 +30,9 @@ When making requests against the end points below, ensure you include an HTTP he
 ## IHE SOLE: 
 * Endpoint: `https://hackathon.siim.org/sole/`
 * Check out the [Profile text](https://wiki.ihe.net/index.php/Standardized_Operational_Log_of_Events_(SOLE)) and [Github project](https://github.com/mohannadhussain/ihe-sole-repo) for information on how to use the API and event submission samples.
+
+### Notes
+* The server resets itself every day at 3am Eastern Time. The process can take up to 10 minutes where some services and/or data may not be available.
 
 ## See also
 * [Resources of Interest](../apis/other-apis-and-standards.md) - other APIs, Libraries, etc.
