@@ -85,3 +85,9 @@ Just like step 2, but with this API call instead:
 ## Resources
 * [Running a Private Ethereum Blockchain using Docker](https://medium.com/scb-digital/running-a-private-ethereum-blockchain-using-docker-589c8e6a4fe8)
 * [Ethereum Homepage](https://ethereum.org/en/)
+* *Wallet apps* can make it easier to work with Blockchain networks (Ethereum or otherwise). Below are some examples to explore:
+  * [MetaMask](https://metamask.io/)
+  * [Trust Wallet](https://trustwallet.com/)
+  * [Ledger Hardware Wallet](https://www.ledger.com/)
+  * [Math Wallet](https://mathwallet.org)
+  * [Brave Browser](https://brave.com/) has a basic built-in wallet
