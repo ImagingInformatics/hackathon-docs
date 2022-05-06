@@ -141,7 +141,7 @@
 <h2 id="1-a-hello-world-example">1. A Hello World example</h2>
 <p>A simple Hello World type query for DICOMweb, would look as follows, to query for all studies for all patients with the last name of <strong>SIIM</strong>: 
 <code>https://hackathon.siim.org/dicomweb/studies/?00100010=SIIM*</code></p>
-<p><strong>NOTE:</strong> If you having trouble formulating a QIDO request, an alternative way to discover patients/studies is to use Orthanc's web UI at: https://hackathon.siim.org/vna/</p>
+<p><strong>NOTE:</strong> If you having trouble formulating a QIDO request, an alternative way to discover patients/studies is to use Orthanc's web UI at: <a href="https://hackathon.siim.org/vna/">https://hackathon.siim.org/vna/</a></p>
 <h2 id="2-get-study-information">2. Get study information</h2>
 <p>Once you've picked a study to download, extract the study UID from the response and you can download its study structure by making a subsequent QIDO-RS query: 
 <code>https://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.4792.2001.103189108764313019491934667255/instances</code></p>
@@ -164,10 +164,10 @@
 <p>Interested in pushing data to the server? <a href="../dicom-web-stow/">This article</a> provides tips on how to do that using cURL, which can easily be adapted for use with other tools, like Postman.</p>
 <h2 id="resources">Resources</h2>
 <ul>
-<li>DICOMweb documentation: http://www.dicomweb.org/</li>
-<li>QIDO-RS: ftp://medical.nema.org/medical/dicom/final/sup166_ft5.pdf</li>
-<li>WADO-RS: ftp://medical.nema.org/medical/dicom/final/sup161_ft.pdf</li>
-<li>STOW-RS: ftp://medical.nema.org/medical/dicom/Final/sup163_ft3.pdf</li>
+<li><a href="http://www.dicomweb.org/">DICOMweb documentation</a></li>
+<li><a href="ftp://medical.nema.org/medical/dicom/final/sup166_ft5.pdf">QIDO-RS</a></li>
+<li><a href="ftp://medical.nema.org/medical/dicom/final/sup161_ft.pdf">WADO-RS</a></li>
+<li><a href="ftp://medical.nema.org/medical/dicom/Final/sup163_ft3.pdf">STOW-RS</a></li>
 </ul>
               
             </div>
