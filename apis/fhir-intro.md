@@ -26,7 +26,7 @@ If you want to control the format of the server response, add an `Accept` header
 
 
 ## Resources
-* Unofficial FHIR Starter Guide: http://www.learnfhir.com
-* FHIR Home Page: https://www.hl7.org/fhir/index.html
-* Searching using FHIR: https://www.hl7.org/fhir/search.html
-* Patient Resource: https://www.hl7.org/fhir/patient.html
+* [Unofficial FHIR Starter Guide](http://www.learnfhir.com)
+* [FHIR Home Page](https://www.hl7.org/fhir/index.html)
+* [Searching using FHIR](https://www.hl7.org/fhir/search.html)
+* [Patient Resource](https://www.hl7.org/fhir/patient.html)

@@ -18,13 +18,13 @@ We recommend using [Postman](https://www.postman.com/) for working with RESTful 
 
 ## FHIR: 
 * Endpoint: `https://hackathon.siim.org/fhir/`
-* Overview of FHIR objects/resources at: https://hackathon.siim.org/
+* Overview of FHIR objects/resources at: [https://hackathon.siim.org/](https://hackathon.siim.org/) (requires [browser plugin](./mod-header.md))
 * Server powered by [HAPI FHIR](http://hapifhir.io/)
 
 ## DICOMweb: 
 * Endpoint: `https://hackathon.siim.org/dicomweb/`
 * WADO-URI endpoint: `https://hackathon.siim.org/wadouri/`
-* VNA Web UI at https://hackathon.siim.org/vna/
+* VNA Web UI at [https://hackathon.siim.org/vna/](https://hackathon.siim.org/vna/)  (requires [browser plugin](./mod-header.md))
 * Server powered by [Orthanc DICOM Server](http://www.orthanc-server.com/)
 
 ## IHE SOLE: 

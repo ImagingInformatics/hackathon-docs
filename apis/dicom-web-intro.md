@@ -21,7 +21,7 @@ If you don't have a SIIM Hackathon API key, see [Hackathon Server](../getting-st
 A simple Hello World type query for DICOMweb, would look as follows, to query for all studies for all patients with the last name of **SIIM**: 
 ```https://hackathon.siim.org/dicomweb/studies/?00100010=SIIM*```
  
-**NOTE:** If you having trouble formulating a QIDO request, an alternative way to discover patients/studies is to use Orthanc's web UI at: https://hackathon.siim.org/vna/
+**NOTE:** If you having trouble formulating a QIDO request, an alternative way to discover patients/studies is to use Orthanc's web UI at: [https://hackathon.siim.org/vna/](https://hackathon.siim.org/vna/)
 
 
 ## 2. Get study information
@@ -56,7 +56,7 @@ The URL above returns DICOM. If you want a rendered JPEG or PND, simply add `&co
 Interested in pushing data to the server? [This article](./dicom-web-stow.md) provides tips on how to do that using cURL, which can easily be adapted for use with other tools, like Postman.
 
 ## Resources
-* DICOMweb documentation: http://www.dicomweb.org/
-* QIDO-RS: ftp://medical.nema.org/medical/dicom/final/sup166_ft5.pdf
-* WADO-RS: ftp://medical.nema.org/medical/dicom/final/sup161_ft.pdf
-* STOW-RS: ftp://medical.nema.org/medical/dicom/Final/sup163_ft3.pdf
+* [DICOMweb documentation](http://www.dicomweb.org/)
+* [QIDO-RS](ftp://medical.nema.org/medical/dicom/final/sup166_ft5.pdf)
+* [WADO-RS](ftp://medical.nema.org/medical/dicom/final/sup161_ft.pdf)
+* [STOW-RS](ftp://medical.nema.org/medical/dicom/Final/sup163_ft3.pdf)

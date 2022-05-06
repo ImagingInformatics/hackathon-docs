@@ -7,7 +7,7 @@ The SIIM Hackathon features imaging informatics APIs like DICOMweb and FHIR amon
 
 ## How can I participate?
 
-Go to https://siim.org/page/hacking_healthcare and ensure you are regitered for the hackathon sessions like the *kickoff* and *brainstorming* sessions at a bare minimum. At those sessions, we'll help you find you way.
+Go to [https://siim.org/page/hacking_healthcare](https://siim.org/page/hacking_healthcare) and ensure you are regitered for the hackathon sessions like the *kickoff* and *brainstorming* sessions at a bare minimum. At those sessions, we'll help you find you way.
 
 Don't forget to join the conversation on [Slack](https://join.slack.com/t/siimhackathon/shared_invite/zt-mkk0yn2e-KUqOLi6ETBUQmOffxmcQxA). 
 

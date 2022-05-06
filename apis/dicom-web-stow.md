@@ -6,5 +6,6 @@ For example, to upload a single part 10 DICOM file to one of the STOW enabled ha
 ```curl -X POST -H "APIKey: [MyApiKey]" -H "Content-Type: multipart/related; type=application/dicom" -F "file=@[dicom.dcm];type=application/dicom" "http://hackathon.siim.org/dicomweb/studies" -v```
 
 Replace the parts in red with the appropriate value, i.e.:
+
 * **[MyApiKey]** - your SIIM Hackathon API Key for the API Gateway (the one you got after signing the participation agreement)
 * **[dicom.dcm]** with the DICOM file name you want to send. You can also send multiple DICOM files at once by repeating that underlined segment.
