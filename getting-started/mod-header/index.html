@@ -104,11 +104,17 @@
 <p>All the APIs hosted on the Hackathon server require an API key to be sent via an HTTP header, which is easy to do using a tool like Postman or curl, but not very straightforward right from within the browser.</p>
 <p>You can obtain a plugin/extension to enable most modern browsers to do this. For example, <a href="https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=en">ModHeader for Chrome</a> can enable this for Chrome users.</p>
 <h2 id="configuration">Configuration</h2>
-<p>Said browser plugins allow you to send specific headers to specific sites. Using the example of ModHeader, you can configured it like so:
-* <strong>Request Headers</strong> <code>apikey: [your-api-key]</code>
-    Replace [your-api-key] with your private API key.
-* <strong>Filters</strong> To ensure your API is not to any other Internet website, add the following entries:
+<p>Said browser plugins allow you to send specific headers to specific sites. Using the example of ModHeader, you can configured it like so:</p>
+<ul>
+<li>
+<p><strong>Request Headers</strong> <code>apikey: [your-api-key]</code>
+    Replace [your-api-key] with your private API key.</p>
+</li>
+<li>
+<p><strong>Filters</strong> To ensure your API is not to any other Internet website, add the following entries:
 <code>https://hackathon.siim.org/.*</code> and <code>http://hackathon.siim.org/.*</code></p>
+</li>
+</ul>
 <p>You now should be able to navigate to URLs like <a href="https://hackathon.siim.org/">https://hackathon.siim.org/</a> or <a href="https://hackathon.siim.org/vna">https://hackathon.siim.org/vna</a> and use them in your browser.</p>
               
             </div>

@@ -58,7 +58,7 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#fhir-concepts">FHIR Concepts</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#prerequesities">Prerequesities</a>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#dont-forget">Don't forget...</a>
     </li>
@@ -117,21 +117,21 @@
                 <h1 id="5-minute-fhir-starting-guide">5-Minute FHIR Starting Guide</h1>
 <h2 id="fhir-concepts">FHIR Concepts</h2>
 <p>All FHIR calls are based on retrieving resources. There are many different types of resources for data you would like to retrieve, including patient information, orders, reports, results, and more.</p>
-<h2 id="prerequesities">Prerequesities</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li><a href="../../getting-started/hackathon-server/">SIIM Hackathon API key</a></li>
 <li>(Optional) <a href="https://www.postman.com/">Postman</a></li>
 </ol>
 <h3 id="dont-forget">Don't forget...</h3>
-<p>When making requests against the end points below, ensure you include an HTTP header like so: 
-<code>apikey: [your API key]</code></p>
+<p>When making requests against the end points below, ensure you include an HTTP header like so: </p>
+<p><code>apikey: [your API key]</code></p>
 <p>If you don't have a SIIM Hackathon API key, see <a href="../../getting-started/hackathon-server/">Hackathon Server</a>.</p>
 <h2 id="1-a-hello-world-example">1. A Hello World example</h2>
-<p>A simple Hello World type query for FHIR, would look as follows, to query for all patients with the last name of <strong>SIIM</strong>: 
-<code>http://hackathon.siim.org/fhir/Patient?name=SIIM</code></p>
+<p>A simple Hello World type query for FHIR, would look as follows, to query for all patients with the last name of <strong>SIIM</strong>: </p>
+<p><code>http://hackathon.siim.org/fhir/Patient?name=SIIM</code></p>
 <h2 id="2-finding-imaging-studies-of-a-given-patient">2. Finding "Imaging Studies" of a given patient</h2>
-<p>Once you've picked a patient to download, extract the patient ID by using the ID field from the response and you can download available studies by making a subsequent ImagingStudy query: 
-<code>http://hackathon.siim.org/fhir/ImagingStudy?patient=siimandy</code></p>
+<p>Once you've picked a patient to download, extract the patient ID by using the ID field from the response and you can download available studies by making a subsequent ImagingStudy query: </p>
+<p><code>http://hackathon.siim.org/fhir/ImagingStudy?patient=siimandy</code></p>
 <h2 id="3-switch-return-format-between-xml-and-json">3. Switch return format between XML and JSON</h2>
 <p>If you want to control the format of the server response, add an <code>Accept</code> header with <code>application/json</code> for JSON or <code>text/xml</code> for XML.</p>
 <h2 id="resources">Resources</h2>
