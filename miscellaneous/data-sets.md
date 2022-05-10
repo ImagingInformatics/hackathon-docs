@@ -1,7 +1,8 @@
 # Openly available datasets
 
 ## [SIIM Hackathon Dataset](https://github.com/ImagingInformatics/hackathon-dataset) 
-A small but comprehensive dataset featuring fictional, but realistic, patient personas with their clinical data in FHIR and images in DICOM that coraborate each patient's story.
+A small but comprehensive dataset featuring fictional, but realistic, patient personas with their clinical data in FHIR and images in DICOM that corroborate each patient's story.
+
 **Note:** If you are using the [Hackathon Server](../getting-started/hackathon-server.md) then it already has this data loaded.
 
 ---
@@ -25,8 +26,18 @@ The dataset was curated for the [SIIM-ISIC Melanoma Classification Challenge](ht
 
 ---
 
-## [The Cohrerent Dataset](https://www.mdpi.com/2079-9292/11/8/1199)
+## [The Coherent Dataset](https://www.mdpi.com/2079-9292/11/8/1199)
 The “Coherent Data Set” is a novel synthetic data set that leverages structured data from Synthea™ to create a longitudinal, “coherent” patient-level electronic health record (EHR). Comprised of synthetic patients, the Coherent Data Set is publicly available, reproducible using Synthea™, and free of the privacy risks that arise from using real patient data. The Coherent Data Set provides complex and representative health records that can be leveraged by health IT professionals without the risks associated with de-identified patient data. It includes familial genomes that were created through a simulation of the genetic reproduction process; magnetic resonance imaging (MRI) DICOM files created with a voxel-based computational model; clinical notes in the style of traditional subjective, objective, assessment, and plan notes; and physiological data that leverage existing System Biology Markup Language (SBML) models to capture non-linear changes in patient health metrics. HL7 Fast Healthcare Interoperability Resources (FHIR®) links the data together. The models can generate clinically logical health data, but ensuring clinical validity remains a challenge without comparable data to substantiate results. We believe this data set is the first of its kind and a novel contribution to practical health interoperability efforts.
 
 ---
 
+## [MIDRC COVID-19 Imaging Data Collection](https://www.rsna.org/covid-19/covid-19-ricord)
+
+RSNA is collecting and publishing data through MIDRC and has established key partnerships and assembled an international task force of scientists and radiologists to support this effort.
+
+We have developed data selection criteria, data sharing agreements and tools to help sites organize, de-identify and transfer data. The RSNA-MIDRC data collection pathway will enable radiology organizations to contribute data to MIDRC safely and conveniently.
+
+Assembling broad and diverse datasets is essential to supporting quality research leading to improvements in diagnosis care.
+
+
+---

@@ -8,7 +8,7 @@
   * Initiation and verification of physician credentialing
   * Vaccine certification and verification
 
-## Prerequesities
+## Prerequisites
 1. [SIIM Hackathon API key](../getting-started/hackathon-server.md)
 2. [Postman](https://www.postman.com/)
 

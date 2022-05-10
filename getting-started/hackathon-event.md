@@ -7,7 +7,7 @@ The SIIM Hackathon features imaging informatics APIs like DICOMweb and FHIR amon
 
 ## How can I participate?
 
-Go to [https://siim.org/page/hacking_healthcare](https://siim.org/page/hacking_healthcare) and ensure you are regitered for the hackathon sessions like the *kickoff* and *brainstorming* sessions at a bare minimum. At those sessions, we'll help you find you way.
+Go to [https://siim.org/page/hacking_healthcare](https://siim.org/page/hacking_healthcare) and ensure you are registered for the hackathon sessions like the *kickoff* and *brainstorming* sessions at a bare minimum. At those sessions, we'll help you find you way.
 
 Don't forget to join the conversation on [Slack](https://join.slack.com/t/siimhackathon/shared_invite/zt-mkk0yn2e-KUqOLi6ETBUQmOffxmcQxA). 
 
@@ -22,6 +22,6 @@ Seek help by posting a message on Slack in `#general`. During the hackathon even
 If you need help outside the hackathon event or for any other urgent matters please contact [Mohannad Hussain](https://github.com/mohannadhussain) or via `@Mohannad` if you are on the Hackathon Slack space.
 
 ## Some things to keep in mind!
-* SIIM's hackathon dataset provides five cohesive patient stories that connect the FHIR and DICOMweb resources like a real-life patient would have. Search for patients with last name SIIM.
+* SIIM's hackathon dataset provides five cohesive patient stories that connect the FHIR and DICOMweb resources like a real-life patient would have. Search for patients with last name `SIIM`.
 *  Our FHIR server features version R4 of the standard (latest).
-* Our DICOMweb server may not support every feature described in the DICOMweb specifications. Check [here](https://bitbucket.org/sjodogne/orthanc-dicomweb/src/default/Status.txt?fileviewer=file-view-default) for more details.
+* Our DICOMweb server may not support every feature described in the DICOMweb specifications. Check [here](https://hg.orthanc-server.com/orthanc-dicomweb/file/tip/Status.txt) for more details.

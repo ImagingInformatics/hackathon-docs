@@ -11,7 +11,8 @@ Wondering what's all this hype about the new standards - check our [5-minute sta
 # Using the SIIM Hackathon Server
 
 When making requests against the end points below, ensure you include an HTTP header like so:
-`apikey: [your API key]`
+
+```apikey: [your API key]```
 
 We recommend using [Postman](https://www.postman.com/) for working with RESTful APIs, such as FHIR and DICOMweb. You can use Postman to get your API calls working, then Postman can export into code in your favourite language (Python, Javascript, etc.)
 

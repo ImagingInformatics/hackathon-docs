@@ -1,5 +1,5 @@
 # Other noteworthy APIs, Standards and Utilities
-**Note** If you are participaing in the SIIM Hackathon, you could get bonus points if your project incorporates emerging standards such as there below!
+**Note** If you are participating in the SIIM Hackathon, you could get bonus points if your project incorporates emerging standards such as there below!
 
 * [IHE AI Results (AIR)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_AIR_Rev1-0_PC_2020-03-10.pdf)
 
@@ -12,6 +12,7 @@
 * Scan your code using SonarQube and include summaries of your findings (and things you learnt) in your showcase presentation (high-level overview, no need for detailed information or code samples).
 
 * Even more bonus points if you are able to open-source your project code :)
+
 
 ## Can't get enough of this API goodness?
 Here are some additional APIs and utilities that could help you create the ultimate mashup:
@@ -36,7 +37,7 @@ Vonk Loader is a command line tool to bulk load resources into a FHIR server. Vo
 Allows construction of FHIR object using a convenient user interface.
 
 ### [LOINC FHIR Terminology Server](https://loinc.org/fhir/)
-You can LOINC content programmatically. Their server uses the terminology services defined by HL7's FHIR standard.
+You can use LOINC content programmatically. Their server uses the terminology services defined by HL7's FHIR standard.
 
 ### [Radiology Gamuts Ontology API](http://www.gamuts.net/dev/)
 The Gamuts.net site provides a REST API to aid developers in using Radiology Gamuts Ontology information.
@@ -47,5 +48,4 @@ The Radreport.org site provides an API to aid developers in accessing structured
 ###  [RSNA RadLex Playbook](http://playbook.radlex.org/playbook/SearchRadlexAction)
 RadLex Playbook is a project of the Radiological Society of North America (RSNA), and constitutes a portion of the [RadLex ontology](http://radlex.org/). Playbook aims to provide a standard system for naming radiology procedures, based on the elements which define an imaging exam such as modality and body part. By providing standard names and codes for radiologic studies, Playbook is intended to facilitate a variety of operational and quality improvement efforts, including workflow optimization, chargemaster management, radiation dose tracking, enterprise integration and image exchange.
 
-The RadLEx Playbook User Guide can be found here in PDF format: 
-http://playbook.radlex.org/playbook-user-guide.pdf?newfile=1
+See the [RadLEx Playbook User Guide](http://playbook.radlex.org/playbook-user-guide.pdf?newfile=1) for more information.
