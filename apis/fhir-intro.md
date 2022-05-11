@@ -27,9 +27,11 @@ Once you've picked a patient to download, extract the patient ID by using the ID
 ## 3. Switch return format between XML and JSON
 If you want to control the format of the server response, add an `Accept` header with `application/json` for JSON or `text/xml` for XML.
 
+## Would you like to see some sample code? 
+Who wouldn't? Right?!? Have a look at [https://replit.com/@mohannadhussain/fhir-example](https://replit.com/@mohannadhussain/fhir-example)
+
 
 ## Resources
-* [Unofficial FHIR Starter Guide](http://www.learnfhir.com)
 * [FHIR Home Page](https://www.hl7.org/fhir/index.html)
 * [Searching using FHIR](https://www.hl7.org/fhir/search.html)
 * [Patient Resource](https://www.hl7.org/fhir/patient.html)

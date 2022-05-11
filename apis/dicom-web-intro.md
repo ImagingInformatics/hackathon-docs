@@ -57,6 +57,9 @@ If you are working with a server that does not support DICOMweb, you can retriev
  
 The URL above returns DICOM. If you want a rendered JPEG or PND, simply add `&contentType=image/jpeg` or `&contentType=image/png` to your **URL** (not header) request.
 
+## Would you like to see some sample code? 
+Who wouldn't? Right?!? Have a look at [https://replit.com/@mohannadhussain/dicom-web-example](https://replit.com/@mohannadhussain/dicom-web-example))
+
 ## Beyond simple viewing
 Interested in pushing data to the server? [This article](./dicom-web-stow.md) provides tips on how to do that using cURL, which can easily be adapted for use with other tools, like Postman.
 

@@ -20,5 +20,6 @@ nav:
         - Other APIs/Standards: apis/other-apis-and-standards.md
     - Miscellaneous:
         - Data Sets: miscellaneous/data-sets.md
+        - Contributing: miscellaneous/contributing.md
 plugins:
   - same-dir
