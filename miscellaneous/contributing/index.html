@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>DICOMweb STOW - SIIM Hackathon Documentation</title>
+    <title>Contributing - SIIM Hackathon Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "DICOMweb STOW";
-        var mkdocs_page_input_path = "apis/dicom-web-stow.md";
+        var mkdocs_page_name = "Contributing";
+        var mkdocs_page_input_path = "miscellaneous/contributing.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -53,25 +53,29 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">APIs</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../fhir-intro/">FHIR Intro</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/fhir-intro/">FHIR Intro</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../dicom-web-intro/">DICOMweb Intro</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/dicom-web-intro/">DICOMweb Intro</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">DICOMweb STOW</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/dicom-web-stow/">DICOMweb STOW</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ethereum-blockchain-intro/">Ethereum Intro</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/ethereum-blockchain-intro/">Ethereum Intro</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../other-apis-and-standards/">Other APIs/Standards</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/other-apis-and-standards/">Other APIs/Standards</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Miscellaneous</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/data-sets/">Data Sets</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../data-sets/">Data Sets</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/contributing/">Contributing</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Contributing</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#this-documenation">This Documenation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#siim-hackathon-dataset">SIIM Hackathon Dataset</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -88,9 +92,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>APIs &raquo;</li><li>DICOMweb STOW</li>
+          <li>Miscellaneous &raquo;</li><li>Contributing</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/dicom-web-stow.md"
+        <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/miscellaneous/contributing.md"
           class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
@@ -100,21 +104,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="push-dicom-to-stow">Push DICOM to STOW</h1>
-<p>Pushing DICOM files at a web archive takes a little more effort, but is still made easy by simple off-the-shelf tools. <a href="http://curl.haxx.se/">cURL</a> is one of these. It is a command line tool built for almost every platform that knows how to talk "web".</p>
-<p>For example, to upload a single part 10 DICOM file to one of the STOW enabled hackathon archives, just use cURL like this:</p>
-<p><code>curl -X POST -H "APIKey: [MyApiKey]" -H "Content-Type: multipart/related; type=application/dicom" -F "file=@[dicom.dcm];type=application/dicom" "http://hackathon.siim.org/dicomweb/studies" -v</code></p>
-<p>Replace the parts in red with the appropriate value, i.e.:</p>
+                <h1 id="contributing">Contributing</h1>
+<p>We are glad that you are thinking about contributing. See below for options...</p>
+<h2 id="this-documenation">This Documenation</h2>
+<p>Do you see a spelling error? Or maybe you have some cool information to add? We'd love to incorporate your changes.</p>
+<p>Everything you see in these docs is authored using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> in Github. Simply fork this project <a href="https://github.com/ImagingInformatics/hackathon-docs">https://github.com/ImagingInformatics/hackathon-docs</a>, make your changes then submit a pull request.</p>
+<h2 id="siim-hackathon-dataset">SIIM Hackathon Dataset</h2>
+<p>We are always in search of volunteers to help enrich our dataset. Below are some ideas for things people can contribute, but we are definitely open to other ideas as well.</p>
 <ul>
-<li><strong>[MyApiKey]</strong> - your SIIM Hackathon API Key for the API Gateway (the one you got after signing the participation agreement)</li>
-<li><strong>[dicom.dcm]</strong> with the DICOM file name you want to send. You can also send multiple DICOM files at once by repeating that underlined segment.</li>
+<li>Incorporate non-Radiology sampels (e.g. Dermatology or Pathology) into one of the patient vignette</li>
+<li>Expland the number of featured FHIR resources, e.g. add some <code>Immunization</code> or <code>Medication</code> resources.</li>
+<li>Enrich existing resources by adding more information, e.g. adding a preliminary report, or an addendum.</li>
+<li>Update our resources for future-proofing against upcoming versions of FHIR</li>
+<li>Incroporate AI-result samples, e.g. DICOM SR TID 1500 and/or FHIR <code>Observation</code></li>
 </ul>
+<p>You can simply fork the project from GitHub here <a href="https://github.com/ImagingInformatics/hackathon-dataset">https://github.com/ImagingInformatics/hackathon-dataset</a>, make your changes then submit a pull request.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../dicom-web-intro/" class="btn btn-neutral float-left" title="DICOMweb Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../ethereum-blockchain-intro/" class="btn btn-neutral float-right" title="Ethereum Intro">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../data-sets/" class="btn btn-neutral float-left" title="Data Sets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -141,10 +150,8 @@
         </span>
     
     
-      <span><a href="../dicom-web-intro/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../data-sets/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../ethereum-blockchain-intro/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
