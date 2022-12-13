@@ -9,7 +9,9 @@ nav:
         - Hackathon Event: getting-started/hackathon-event.md
         - Hackathon Server: getting-started/hackathon-server.md
         - ModHeader: getting-started/mod-header.md
+        - Slack: getting-started/slack.md
     - What's new:
+        - 2023: whats-new/2023.md
         - 2022: whats-new/2022.md
         - 2021: whats-new/2021.md
     - APIs:
