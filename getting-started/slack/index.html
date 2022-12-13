@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Slack - SIIM Hackathon Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Slack";
+        var mkdocs_page_input_path = "getting-started/slack.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> SIIM Hackathon Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../hackathon-event/">Hackathon Event</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hackathon-server/">Hackathon Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mod-header/">ModHeader</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Slack</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#why-slack">Why Slack?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#slack-etiquette">Slack Etiquette</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#threads">Threads</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reactions">Reactions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#channels">Channels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#here-and-channel">@here and @channel</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#slack-notifications">Slack Notifications</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pro-tips">Pro-tips</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gif-and-giphy">/gif and /giphy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#slack-spaces">Slack Spaces</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reminders">Reminders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bookmarks">Bookmarks</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">What's new</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../whats-new/2023/">2023</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../whats-new/2022/">2022</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../whats-new/2021/">2021</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">APIs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/fhir-intro/">FHIR Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/dicom-web-intro/">DICOMweb Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/dicom-web-stow/">DICOMweb STOW</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/ethereum-blockchain-intro/">Ethereum Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../apis/other-apis-and-standards/">Other APIs/Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/data-sets/">Data Sets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/contributing/">Contributing</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">SIIM Hackathon Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Getting Started &raquo;</li>
+      <li>Slack</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/getting-started/slack.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="getting-started-with-slack">Getting Started with Slack</h1>
+<h2 id="why-slack">Why Slack?</h2>
+<p>Slack combines the power of instant messaging with email-like record keeping and categorization. All messages are kept and are easy to find via search, just like email. Messages can even be grouped together in a thread as well. However, Slack does away with the clutter of email (signatures, disclaimers, etc) and even delays - all messages are delivered instantly.</p>
+<p>Slack has the concept of <em>rooms</em>, which can represent broad topics or teams, and then <em>threads</em> which are a specific topic/question along with replies in the same thread. Slack also suports "direct messages" (i.e. private 1:1 messaging).</p>
+<h2 id="slack-etiquette">Slack Etiquette</h2>
+<h3 id="threads">Threads</h3>
+<p>When replying to a message, reply via the threads feature to reduce visual clutter and make it easy for others to catch up on topics of importance to them with less scrolling.</p>
+<p>When you see a message you want to respond to, hover over that message and you'll see a set of actions availabe. The second one is the one you want here, which reads <code>Reply to thread</code>.</p>
+<h3 id="reactions">Reactions</h3>
+<p>Speaking of hover actions, the first one allows you to respond to a message using emojis - yet another way Slack lets you say more with less 😉️</p>
+<h3 id="channels">Channels</h3>
+<p>Also referred to as rooms, each one has a purpose. For example, a given hackathon team can have a channel to discuss progress, so that would not be a place to bring up topics unrelated to that team. There are generic channels like <code>#general</code> for general topics, <code>#random</code> for random things (e.g. jokes and memes). Many slack spaces also utilize an <code>#introductions</code> channel for people to formally introduce themselves. </p>
+<p>The hackathon also utilizes <code>#code-heroes</code> and <code>#domain-experts</code> channels for technical and clinical/workflow questions, respectiely. </p>
+<h3 id="here-and-channel">@here and @channel</h3>
+<p>Use only when necessary, please. Both of which send notification to users who are online or all in the current channels, respectively. Ever heard of notification fatigue?!?</p>
+<p>You can alternatively tag individuals by combining @ with their username, e.g. <code>@John</code>.</p>
+<h2 id="slack-notifications">Slack Notifications</h2>
+<p>Speaking of notification fatigue, some find Slack's default notification settings to be too noisy. Find your avatar/profile picture in the top right corner, click on it then choose <code>Preferences</code>. It should launch into the <code>Notifications</code> section by default. </p>
+<p>There, we recommend you change <code>Notify me about...</code> from <code>All new messages</code> to <code>Direct messages, mentions &amp; keywords</code>. If you intend to use Slack on your mobile device as well, you can check <code>Use different settings for my mobile device</code> and customize that accordingly.</p>
+<p>If you scroll down, you can further customize other notification settings, like the time range when notifications are allowed to come through.</p>
+<p>Last but not least, if a channel gets extra noisy, you can either mute that channel (means you can still read and respond messages but no notifications will come for that channel) or you can leave the channel outright (can no longer read or respond to messages from that channel).</p>
+<h2 id="pro-tips">Pro-tips</h2>
+<h3 id="gif-and-giphy">/gif and /giphy</h3>
+<p>In Slack spaces where either or both of these are enabled, you can use this to express your thoughts with a GIF meme!</p>
+<h3 id="slack-spaces">Slack Spaces</h3>
+<p>A Slack space is akin to an email account. Being in multiple spaces is akin to having multiple email addresses. E.g. One space might be used for your work, another for the SIIM Hackathon, and additional spaces can be used for other communities/organizations.</p>
+<h3 id="reminders">Reminders</h3>
+<p>Slack lets you set a reminder about a particular message if you need to act upon at a later date/time. Those who use Gmail can relate using the snooze feature.</p>
+<h3 id="bookmarks">Bookmarks</h3>
+<p>You can also "save" a message to be easily found later in the <code>Saved items</code> section, very much like bookmarking webpages using your favorite Internet browser.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mod-header/" class="btn btn-neutral float-left" title="ModHeader"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../whats-new/2023/" class="btn btn-neutral float-right" title="2023">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ImagingInformatics/hackathon-docs/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../mod-header/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../whats-new/2023/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
