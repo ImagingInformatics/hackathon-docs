@@ -1,5 +1,5 @@
 # 2023 SIIM Hackathon
-Join the first-ever **hybrid** SIIM Hackathon, taking place Wednesday, June 7th through Friday, June 16th, 2022. Everyone is welcome - No coding experience required! The hybrid format allows people to participate 100% virtually but also provides some optional in-person activities at [SIIM 23](https://siim.org/page/23m_overview). More information about the 2023 Hackathon will soon be available at [siim.org/hackathon](https://siim.org/hackathon).
+Join the first-ever **hybrid** SIIM Hackathon, taking place Wednesday, June 7th through Friday, June 16th, 2023. Everyone is welcome - No coding experience required! The hybrid format allows people to participate 100% virtually but also provides some optional in-person activities at [SIIM 23](https://siim.org/page/23m_overview). More information about the 2023 Hackathon will soon be available at [siim.org/hackathon](https://siim.org/hackathon).
 
 
 The SIIM Hackathon is open to all walks of life, whether you are clinical, technical or something else - we want YOU! In true SIIM spirit, the hackathon is focused on education and collaboration above all else. Come in groups or individually - we can pair you with others. The hackathon is not a full-time engagement, meaning, you can join us with any amount of free time you have.
