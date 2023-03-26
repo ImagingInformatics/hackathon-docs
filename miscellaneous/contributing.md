@@ -17,3 +17,52 @@ We are always in search of volunteers to help enrich our dataset. Below are some
 
 You can simply fork the project from GitHub here [https://github.com/ImagingInformatics/hackathon-dataset](https://github.com/ImagingInformatics/hackathon-dataset), make your changes then submit a pull request.
 
+### How to add new patient's data on the Dataset from existing dicom files?
+
+#### 1. Fork the two repositories for the [dataset](https://github.com/ImagingInformatics/hackathon-dataset.git) and the [images](https://github.com/ImagingInformatics/hackathon-images.git) and clone your forks locally.
+#### 2. Update the dicom fields of the images you want to add in the dataset
+* Use [pydicom](https://pydicom.github.io/) to update the dicom fields of the images you want to contribute. (ps: other dicom libraries can be used as well, like (dcm4che)[https://www.dcm4che.org/])
+* The non-exhaustive list of fields to update from existing dicom files are:  
+
+| Field            | Value                                                                                                           |
+|------------------|-----------------------------------------------------------------------------------------------------------------|
+| PatientID        | PatientID of the patient you want to contribute. e.g. breastdx-01-0003                                          |
+| PatientName      | PatientName of the patient you want to contribute. Look at the dataset repository for existing names e.g. Sally |
+| AccessionNumber  | Unique number identifying the study in the system (HIS/RIS). e.g. a330740045455447                              |
+| PatientBirthDate | Birth date of the patient. Ideally, patient age should be between 40-60 years old. e.g. 19500825                |
+| StudyDate        | Date of the study if not provided. e.g. 20190101                                                                |
+| PatientAge       | Age of the patient. Should be the difference between StudyDate and PatientBirthDate. e.g. 049Y                  |
+
+* Save the modified dicom files in the following directory structure:  
+````bash
+/{patient_name} SIIM/
+
+Example with patient Sally:
+
+/Sally SIIM/
+````
+#### 3. Create the FHIR resources of the patient you want to contribute
+* Start by creating a patient resource if it does not exist in the dataset repository. Use existing patient resource as template and
+update the resource id, text, name, gender, and birth date fields according the patient data.
+* Create an imaging study resource for the patient from the dicom files. Use [dicom2fhir](https://github.com/LinuxForHealth/dicom-fhir-converter.git) script
+as a starting point for the imaging resource.
+* Modify the imaging study resource to fit the SIIM Hackathon dataset format. Here are a not exhaustive list of fields to update manually:
+
+| Field                         | Value                                             |
+|-------------------------------|---------------------------------------------------|
+| identifier.assigner.reference | Organisation/siim                                 |
+| subject.reference             | Patient/siim{patient_name} e.g. Patient/siimsally |
+| endpoint                      | Endpoint/siim-dicomweb                            |
+
+* Move the fhir files imaging study and patient into the following directory structure  
+````bash
+/siim_{patient_name}_{patient_id}/ImagingStudy/imaging_study.{series_id}.json
+/siim_{patient_name}_{patient_id}/Patient/patient.{patient_id}.json
+
+Example with patient Sally and with patient id breastdx-01-0003:
+
+/siim_sally_breastdx-01-0003/ImagingStudy/imaging_study.1.2.276.0.7230010.3.1.4.8323329.1000.1517875209.100000.json
+/siim_sally_breastdx-01-0003/Patient/patient.breastdx-01-0003.json
+````
+
+#### 4. Create a pull request for the dataset and images repositories
