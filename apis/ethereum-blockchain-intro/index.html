@@ -70,15 +70,33 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#1-set-up">1. Set up</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-ethereum-docker-set-up">1. Ethereum Docker Set Up</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1a-required-files">1a. Required Files</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#env">.env</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-check-the-list-of-nodespeers">2. Check the list of nodes/peers</a>
+    <li class="toctree-l4"><a class="reference internal" href="#dockerfile">Dockerfile</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-get-the-latest-block-number">3. Get the latest block number</a>
+    <li class="toctree-l4"><a class="reference internal" href="#docker-composeyml">docker-compose.yml</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-get-the-list-of-accounts">4. Get the list of accounts</a>
+    <li class="toctree-l4"><a class="reference internal" href="#genesisjson">genesis.json</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-get-the-balance-of-an-account">5. Get the balance of an account</a>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1b-running-it">1b. Running it</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-postman-set-up">2. Postman Set Up</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-check-the-list-of-nodespeers">3. Check the list of nodes/peers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-get-the-latest-block-number">4. Get the latest block number</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-get-the-list-of-accounts">5. Get the list of accounts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-get-the-balance-of-an-account">6. Get the balance of an account</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a>
     </li>
@@ -131,22 +149,150 @@
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
-<li><a href="../../getting-started/hackathon-server/">SIIM Hackathon API key</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
 <li><a href="https://www.postman.com/">Postman</a></li>
 </ol>
-<h2 id="1-set-up">1. Set up</h2>
+<h2 id="1-ethereum-docker-set-up">1. Ethereum Docker Set Up</h2>
+<h3 id="1a-required-files">1a. Required Files</h3>
+<p>Create a folder to keep all things related to Ethereum in one place. The under that folder create the following files with their contents:</p>
+<h4 id="env">.env</h4>
+<pre><code># The ID of Ethereum Network
+NETWORK_ID=1214
+
+# The password to create and access the primary account
+ACCOUNT_PASSWORD=supersecretpassword
+</code></pre>
+<h4 id="dockerfile">Dockerfile</h4>
+<pre><code>FROM ethereum/client-go:v1.10.1
+
+ARG ACCOUNT_PASSWORD
+
+COPY genesis.json /tmp
+
+RUN geth init /tmp/genesis.json \
+    &amp;&amp; rm -f ~/.ethereum/geth/nodekey \
+    &amp;&amp; echo ${ACCOUNT_PASSWORD} &gt; /tmp/password \
+    &amp;&amp; geth account new --password /tmp/password \
+    &amp;&amp; rm -f /tmp/password
+
+ENTRYPOINT [&quot;geth&quot;]
+</code></pre>
+<h4 id="docker-composeyml">docker-compose.yml</h4>
+<pre><code>version: '3.7'
+
+services:
+  geth-bootnode:
+    hostname: geth-bootnode
+    env_file:
+      - .env
+    image: geth-client
+    build:
+      context: .
+      args:
+        - ACCOUNT_PASSWORD=${ACCOUNT_PASSWORD}
+    command:
+      --nodekeyhex=&quot;b0ac22adcad37213c7c565810a50f1772291e7b0ce53fb73e7ec2a3c75bc13b5&quot;
+      --nodiscover
+      --ipcdisable
+      --networkid=${NETWORK_ID}
+      #--netrestrict=&quot;172.16.254.0/28&quot;
+    networks:
+      priv-eth-net:
+
+  geth-rpc-endpoint:
+    hostname: geth-rpc-endpoint
+    env_file:
+      - .env
+    image: geth-client
+    depends_on:
+      - geth-bootnode    
+    command:
+      --bootnodes=&quot;enode://af22c29c316ad069cf48a09a4ad5cf04a251b411e45098888d114c6dd7f489a13786620d5953738762afa13711d4ffb3b19aa5de772d8af72f851f7e9c5b164a@geth-bootnode:30303&quot;
+      --allow-insecure-unlock
+      --http
+      --http.addr=&quot;0.0.0.0&quot;
+      --http.api=&quot;eth,web3,net,admin,personal&quot;
+      --http.corsdomain=&quot;*&quot;
+      --networkid=${NETWORK_ID}
+      --rpcvhosts=*
+      #--netrestrict=&quot;172.16.254.0/28&quot;
+    ports:
+      - &quot;8545:8545&quot;
+    networks:
+      priv-eth-net:
+
+  geth-miner:
+    hostname: geth-miner
+    env_file:
+      - .env
+    image: geth-client
+    depends_on:
+      - geth-bootnode
+    command:
+      --bootnodes=&quot;enode://af22c29c316ad069cf48a09a4ad5cf04a251b411e45098888d114c6dd7f489a13786620d5953738762afa13711d4ffb3b19aa5de772d8af72f851f7e9c5b164a@geth-bootnode:30303&quot;
+      --mine
+      --miner.threads=1
+      --networkid=${NETWORK_ID}
+      #--netrestrict=&quot;172.16.254.0/28&quot;
+    networks:
+      priv-eth-net:
+
+networks:
+  priv-eth-net:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.16.254.0/28
+</code></pre>
+<h4 id="genesisjson">genesis.json</h4>
+<pre><code>{
+  &quot;config&quot;: {
+    &quot;chainId&quot;: 1214,
+    &quot;homesteadBlock&quot;: 0,
+    &quot;eip150Block&quot;: 0,
+    &quot;eip155Block&quot;: 0,
+    &quot;eip158Block&quot;: 0,
+    &quot;byzantiumBlock&quot;: 0,
+    &quot;constantinopleBlock&quot;: 0,
+    &quot;petersburgBlock&quot;: 0,
+    &quot;ethash&quot;: {}
+  },
+  &quot;difficulty&quot;: &quot;1&quot;,
+  &quot;gasLimit&quot;: &quot;12000000&quot;,
+  &quot;alloc&quot;: {
+      &quot;0x0000000000000000000000000000000000000001&quot;: {
+      &quot;balance&quot;: &quot;111111111&quot;
+    },
+      &quot;0x0000000000000000000000000000000000000002&quot;: {
+      &quot;balance&quot;: &quot;222222222&quot;
+    }
+  }
+}
+
+</code></pre>
+<h3 id="1b-running-it">1b. Running it</h3>
+<p>Under your folder, you can run to start it:</p>
+<pre><code>docker-compose up -d
+</code></pre>
+<p>To stop it:</p>
+<pre><code>docker-compose down -v
+</code></pre>
+<p>If you find it using too much CPU, you can restrict its CPU usage like so:</p>
+<pre><code>docker update --cpu-shares=100 ethereum_geth-miner_1
+docker update --cpu-shares=100 ethereum_geth-rpc-endpoint_1
+docker update --cpu-shares=100 ethereum_geth-bootnode_1
+</code></pre>
+<h2 id="2-postman-set-up">2. Postman Set Up</h2>
 <ol>
 <li>Launch Postman</li>
 <li>Create a new request</li>
 <li>Click the <code>GET</code> dropdown next to the URL, and change it to <code>POST</code></li>
-<li>Set the request URL to <code>http://hackathon.siim.org/ethereum/</code> <strong>NOTE http NOT https</strong></li>
-<li>Click the <code>Headers</code> tab (under the URL) and set the following headers:
-    A. <code>apikey</code> with a value of your SIIM Hackathon API Key
-    B. <code>Content-Type</code> with a value of <code>application/json</code></li>
+<li>Set the request URL to <code>http://localhost:8545/</code> <strong>NOTE http NOT https</strong></li>
+<li>Click the <code>Headers</code> tab (under the URL) and set the header <code>Content-Type</code> with a value of <code>application/json</code></li>
 <li>Click the <code>Body</code> tab (under the URL) and select <code>Raw</code> then change the <code>Text</code> dropdown that appeared on the right to <code>JSON</code></li>
 <li>The empty white space below is where you will copy/paste the API calls seen below</li>
 </ol>
-<h2 id="2-check-the-list-of-nodespeers">2. Check the list of nodes/peers</h2>
+<h2 id="3-check-the-list-of-nodespeers">3. Check the list of nodes/peers</h2>
 <p>This is useful to know the size of the network, i.e. the number of entities actively connected to it (Hint: our network is private so it should be one).</p>
 <p>Copy/paste the following API call in the Request Body, then hit the blue <code>Send</code> button. You should see results in the <code>Response</code> pane.</p>
 <pre><code>{
@@ -156,7 +302,7 @@
     &quot;params&quot;: []
 }
 </code></pre>
-<h2 id="3-get-the-latest-block-number">3. Get the latest block number</h2>
+<h2 id="4-get-the-latest-block-number">4. Get the latest block number</h2>
 <p>This tells us how long the "chain" is in this network, which provides an idea of how many transactions have taken place.</p>
 <p>Just like step 2, but with this API call instead:</p>
 <pre><code>{
@@ -166,7 +312,7 @@
     &quot;params&quot;: []
 }
 </code></pre>
-<h2 id="4-get-the-list-of-accounts">4. Get the list of accounts</h2>
+<h2 id="5-get-the-list-of-accounts">5. Get the list of accounts</h2>
 <p>Just like you can have multiple accounts with a bank, the same concept applies here, too. This call lists all known accounts</p>
 <p>Just like step 2, but with this API call instead:</p>
 <pre><code>{
@@ -176,7 +322,7 @@
     &quot;params&quot;: []
 }
 </code></pre>
-<h2 id="5-get-the-balance-of-an-account">5. Get the balance of an account</h2>
+<h2 id="6-get-the-balance-of-an-account">6. Get the balance of an account</h2>
 <p>Just like checking the balance on your real-life bank account, except in Ethereum the balance is in <a href="https://www.google.com/search?q=hexadecimal+to+decimal+converter">hexadecimal</a> number and in <a href="https://ethdocs.org/en/latest/ether.html">wei unit</a>.</p>
 <p>Just like step 2, but with this API call instead:</p>
 <pre><code>{
