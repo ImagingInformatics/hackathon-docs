@@ -18,6 +18,7 @@ nav:
         - FHIR Intro: apis/fhir-intro.md
         - DICOMweb Intro: apis/dicom-web-intro.md
         - DICOMweb STOW: apis/dicom-web-stow.md
+        - ChatGPT: apis/chat-gpt.md
         - Ethereum Intro: apis/ethereum-blockchain-intro.md
         - Other APIs/Standards: apis/other-apis-and-standards.md
     - Miscellaneous:
