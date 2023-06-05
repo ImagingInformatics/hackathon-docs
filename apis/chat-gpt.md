@@ -9,6 +9,7 @@ You can use ChatGPT to generate code samples, ask it Imaging Informatics questio
 
 ### ChatGPT 3.5 vs 4
 Below is a quick comparison to help you plan accordingly:
+
 | Generation  | Speed                  | Intelligence & Accuracy | Cost/API Call | # of calls for 1000 credits |
 |-------------|------------------------|-----------------------|---------------|----------------------------------------------|
 | ChatGPT 3.5 | Fast (tens of seconds) | Good                  | 1             | 1000                                         |
@@ -17,6 +18,7 @@ Below is a quick comparison to help you plan accordingly:
 ## How to use the Chat GPT Proxy
 Make an HTTP POST to `https://siim.md.ai/api/openai/chat/completions`
 With the following HTTP headers:
+
 * `Content-Type`: `application/json`
 * `x-access-token`: *YOUR_MDAI_API_KEY*
 
@@ -48,6 +50,7 @@ Please note that ChatGPT's generated code only serves a starting point and may n
 
 ## Aknowledgements
 This guide, and API access would not be possible with the help of some awesome people!!
+
 1. [MD.ai](https://md.ai) and especially [Dr. George Shih](https://www.linkedin.com/in/georgenyc/) generously sharing ChatGPT API access.
 2. [Dr. Howard Chen](https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/) taking time to diligently document and test the steps involved in this process.
 3. [Dr. Stephanie Hou](https://www.linkedin.com/in/stephanie-hou-5269201a9/) for reviewing, editing, commenting, making suggestions, etc.
