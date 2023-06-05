@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>ChatGPT - SIIM Hackathon Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ChatGPT";
+        var mkdocs_page_input_path = "apis/chat-gpt.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> SIIM Hackathon Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/hackathon-event/">Hackathon Event</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/hackathon-server/">Hackathon Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/mod-header/">ModHeader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/slack/">Slack</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">What's new</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../whats-new/2023/">2023</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../whats-new/2022/">2022</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../whats-new/2021/">2021</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">APIs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../fhir-intro/">FHIR Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dicom-web-intro/">DICOMweb Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dicom-web-stow/">DICOMweb STOW</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ethereum-blockchain-intro/">Ethereum Intro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../other-apis-and-standards/">Other APIs/Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Miscellaneous</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/data-sets/">Data Sets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../miscellaneous/contributing/">Contributing</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">SIIM Hackathon Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>ChatGPT</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/chat-gpt.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="chatgpt">ChatGPT</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Interested in trying out ChatGPT? Thanks to our friends at <a href="https://md.ai/">MD.ai</a>, we have a proxy in place that allows you to perform API calls to both ChatGPT 3.5 and 4.0. The proxy utilizes md.ai credits with every account starting with 1000 free credits. Go to <a href="https://siim.md.ai/">siim.md.ai</a> and sign up for a free account to secure your credits.</p>
+<p>This is a quick starting guide. If you want a more detailed version, please see <a href="https://colab.research.google.com/drive/1V_UthmhzQMR4GCQRuNUQGgHVp93iGCCw?usp=sharing">Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon</a>, thanks to <a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a>.</p>
+<p>You can use ChatGPT to generate code samples, ask it Imaging Informatics questions, etc. Please share on Slack what you're using ChatGPT for and how useful you found it to be.</p>
+<h3 id="chatgpt-35-vs-4">ChatGPT 3.5 vs 4</h3>
+<p>Below is a quick comparison to help you plan accordingly:
+| Generation  | Speed                  | Intelligence &amp; Accuracy | Cost/API Call | # of calls for 1000 credits |
+|-------------|------------------------|-----------------------|---------------|----------------------------------------------|
+| ChatGPT 3.5 | Fast (tens of seconds) | Good                  | 1             | 1000                                         |
+| ChatGPT 4   | Slow (several minutes) | Great                 | 10            | 100                                           |</p>
+<h2 id="how-to-use-the-chat-gpt-proxy">How to use the Chat GPT Proxy</h2>
+<p>Make an HTTP POST to <code>https://siim.md.ai/api/openai/chat/completions</code>
+With the following HTTP headers:
+* <code>Content-Type</code>: <code>application/json</code>
+* <code>x-access-token</code>: <em>YOUR_MDAI_API_KEY</em></p>
+<p>And the following JSON Payload:</p>
+<pre><code>{
+    &quot;model&quot;: &quot;gpt-4&quot;,
+    &quot;messages&quot;: [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;your question or prompt goes here&quot;}],
+    &quot;temperature&quot;: 0
+  }
+</code></pre>
+<p>You substitute <code>gpt-4</code> with <code>gpt-3.5-turbo</code> to address different ChatGPT versions.</p>
+<p>Your results will be served back in JSON format.</p>
+<p>See the Sample Notebooks section belore for working code examples.</p>
+<h2 id="getting-an-api-key">Getting an API Key</h2>
+<p>Go to <a href="https://siim.md.ai/">siim.md.ai</a> and sign up for a free account. Once logged in, click your initial/Avatar in the top right corner and select <code>User Settings</code>. In the next screen, select <code>Access Tokens</code> and proceed to <code>Generate New Token</code>. Once you have a token, you can use it in your code.</p>
+<h2 id="sample-notebooks">Sample Notebooks</h2>
+<ul>
+<li>A more detailed version of this guide, <a href="https://colab.research.google.com/drive/1V_UthmhzQMR4GCQRuNUQGgHVp93iGCCw?usp=sharing">Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon</a>, thanks to <a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a></li>
+<li>Example asking ChatGPT 4 to Generate a Jupyter Notebook doing FHIR and DICOMweb API Calls. One <a href="https://colab.research.google.com/gist/georgezero/5e47d843357fa57286ef8c25e13c25b2/mdai-gpt-4-api-demo.ipynb">Using ChatGPT 4</a> and another <a href="https://colab.research.google.com/gist/georgezero/ab60da51114fe57089b29feb676c35f7/mdai-gpt-4-api-demo.ipynb">Using ChatGPT 3.5</a> or <a href="https://colab.research.google.com/gist/georgezero/c5582934e980eeabcf38ad6d648cc4d9/mdai-gpt-4-api-demo.ipynb">Compare both side-by-side</a>, thanks to <a href="https://www.linkedin.com/in/georgenyc/">Dr. George Shih</a>.</li>
+</ul>
+<h2 id="keep-in-mind">Keep in mind...</h2>
+<p>Please note that ChatGPT's generated code only serves a starting point and may not work as-is against the Hackathon server for a variety of reasons. Some basic troubleshooting and minor tweaks might be necessary. Don't be afraid to ask for help if you get stuck!</p>
+<h2 id="aknowledgements">Aknowledgements</h2>
+<p>This guide, and API access would not be possible with the help of some awesome people!!
+1. <a href="https://md.ai">MD.ai</a> and especially <a href="https://www.linkedin.com/in/georgenyc/">Dr. George Shih</a> generously sharing ChatGPT API access.
+2. <a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a> taking time to diligently document and test the steps involved in this process.
+3. <a href="https://www.linkedin.com/in/stephanie-hou-5269201a9/">Dr. Stephanie Hou</a> for reviewing, editing, commenting, making suggestions, etc.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ImagingInformatics/hackathon-docs/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
