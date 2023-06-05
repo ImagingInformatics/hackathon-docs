@@ -127,11 +127,34 @@
 <p>This is a quick starting guide. If you want a more detailed version, please see <a href="https://colab.research.google.com/drive/1V_UthmhzQMR4GCQRuNUQGgHVp93iGCCw?usp=sharing">Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon</a>, thanks to <a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a>.</p>
 <p>You can use ChatGPT to generate code samples, ask it Imaging Informatics questions, etc. Please share on Slack what you're using ChatGPT for and how useful you found it to be.</p>
 <h3 id="chatgpt-35-vs-4">ChatGPT 3.5 vs 4</h3>
-<p>Below is a quick comparison to help you plan accordingly:
-| Generation  | Speed                  | Intelligence &amp; Accuracy | Cost/API Call | # of calls for 1000 credits |
-|-------------|------------------------|-----------------------|---------------|----------------------------------------------|
-| ChatGPT 3.5 | Fast (tens of seconds) | Good                  | 1             | 1000                                         |
-| ChatGPT 4   | Slow (several minutes) | Great                 | 10            | 100                                           |</p>
+<p>Below is a quick comparison to help you plan accordingly:</p>
+<table>
+<thead>
+<tr>
+<th>Generation</th>
+<th>Speed</th>
+<th>Intelligence &amp; Accuracy</th>
+<th>Cost/API Call</th>
+<th># of calls for 1000 credits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT 3.5</td>
+<td>Fast (tens of seconds)</td>
+<td>Good</td>
+<td>1</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>ChatGPT 4</td>
+<td>Slow (several minutes)</td>
+<td>Great</td>
+<td>10</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
 <h2 id="how-to-use-the-chat-gpt-proxy">How to use the Chat GPT Proxy</h2>
 <p>Make an HTTP POST to <code>https://siim.md.ai/api/openai/chat/completions</code>
 With the following HTTP headers:
