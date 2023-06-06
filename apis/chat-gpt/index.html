@@ -66,9 +66,11 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">ChatGPT</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#gpt-chatgpt-whats-the-difference">GPT? ChatGPT? What's The Difference?</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#chatgpt-35-vs-4">ChatGPT 3.5 vs 4</a>
+    <li class="toctree-l3"><a class="reference internal" href="#gpt-35-vs-4">GPT 3.5 vs 4</a>
     </li>
         </ul>
     </li>
@@ -121,12 +123,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="chatgpt">ChatGPT</h1>
+                <h1 id="generative-pretrained-transformer-gpt-aka-chatgpt">Generative Pretrained Transformer (GPT, aka ChatGPT)</h1>
+<h2 id="gpt-chatgpt-whats-the-difference">GPT? ChatGPT? What's The Difference?</h2>
+<p>GPT, or Generative Pre-trained Transformer, is a language model architecture developed by OpenAI. It is trained on a large corpus of text data to generate coherent and contextually relevant responses to given prompts. When you use the API to query the server, you are interacting with a GPT model.  GPT has may variants, each specialized to do something slightly different, including Chat Completion, which brings us to... ChatGPT generally refers to a non-API consumer interface using GPT specifically designed for conversational interactions. It focuses on generating coherent responses in a conversational context. ChatGPT is fine-tuned using reinforcement learning from human feedback to improve the quality of its responses. This fine-tuning process helps ChatGPT produce more engaging and contextually appropriate replies during conversational exchanges.</p>
 <h2 id="introduction">Introduction</h2>
-<p>Interested in trying out ChatGPT? Thanks to our friends at <a href="https://md.ai/">MD.ai</a>, we have a proxy in place that allows you to perform API calls to both ChatGPT 3.5 and 4.0. The proxy utilizes md.ai credits with every account starting with 1000 free credits. Go to <a href="https://siim.md.ai/">siim.md.ai</a> and sign up for a free account to secure your credits.</p>
+<p>Interested in trying out OpenAI's GPT? Thanks to our friends at <a href="https://md.ai/">MD.ai</a>, we have a proxy in place that allows you to perform API calls to both GPT versions 3.5 and 4.0. The proxy utilizes md.ai credits with every account starting with 1000 free credits. Go to <a href="https://siim.md.ai/">siim.md.ai</a> and sign up for a free account to secure your credits.</p>
 <p>This is a quick starting guide. If you want a more detailed version, please see <a href="https://colab.research.google.com/drive/1V_UthmhzQMR4GCQRuNUQGgHVp93iGCCw?usp=sharing">Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon</a>, thanks to <a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a>.</p>
-<p>You can use ChatGPT to generate code samples, ask it Imaging Informatics questions, etc. Please share on Slack what you're using ChatGPT for and how useful you found it to be.</p>
-<h3 id="chatgpt-35-vs-4">ChatGPT 3.5 vs 4</h3>
+<p>You can use OpenAI's GPT to generate code samples, ask it Imaging Informatics questions, etc. Please share on Slack what you're using GPT for and how useful you found it to be.</p>
+<h3 id="gpt-35-vs-4">GPT 3.5 vs 4</h3>
 <p>Below is a quick comparison to help you plan accordingly:</p>
 <table>
 <thead>
@@ -140,14 +144,14 @@
 </thead>
 <tbody>
 <tr>
-<td>ChatGPT 3.5</td>
+<td>GPT 3.5</td>
 <td>Fast (tens of seconds)</td>
 <td>Good</td>
 <td>1</td>
 <td>1000</td>
 </tr>
 <tr>
-<td>ChatGPT 4</td>
+<td>GPT 4</td>
 <td>Slow (several minutes)</td>
 <td>Great</td>
 <td>10</td>
@@ -169,7 +173,7 @@ With the following HTTP headers:</p>
     &quot;temperature&quot;: 0
   }
 </code></pre>
-<p>You substitute <code>gpt-4</code> with <code>gpt-3.5-turbo</code> to address different ChatGPT versions.</p>
+<p>You may substitute <code>gpt-4</code> with <code>gpt-3.5-turbo</code> to address different GPT versions.</p>
 <p>Your results will be served back in JSON format.</p>
 <p>See the Sample Notebooks section below for working code examples.</p>
 <h2 id="getting-an-api-key">Getting an API Key</h2>
@@ -177,14 +181,14 @@ With the following HTTP headers:</p>
 <h2 id="sample-notebooks">Sample Notebooks</h2>
 <ul>
 <li>A more detailed version of this guide, <a href="https://colab.research.google.com/drive/1V_UthmhzQMR4GCQRuNUQGgHVp93iGCCw?usp=sharing">Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon</a>, thanks to <a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a></li>
-<li>Example asking ChatGPT to generate a Jupyter Notebook doing FHIR and DICOMweb API Calls. One <a href="https://colab.research.google.com/gist/georgezero/5e47d843357fa57286ef8c25e13c25b2/mdai-gpt-4-api-demo.ipynb">Using ChatGPT 4</a> and another <a href="https://colab.research.google.com/gist/georgezero/ab60da51114fe57089b29feb676c35f7/mdai-gpt-4-api-demo.ipynb">Using ChatGPT 3.5</a> or <a href="https://colab.research.google.com/gist/georgezero/c5582934e980eeabcf38ad6d648cc4d9/mdai-gpt-4-api-demo.ipynb">Compare both side-by-side</a>, thanks to <a href="https://www.linkedin.com/in/georgenyc/">Dr. George Shih</a>.</li>
+<li>Example asking GPT to generate a Jupyter Notebook doing FHIR and DICOMweb API Calls. One <a href="https://colab.research.google.com/gist/georgezero/5e47d843357fa57286ef8c25e13c25b2/mdai-gpt-4-api-demo.ipynb">Using GPT 4</a> and another <a href="https://colab.research.google.com/gist/georgezero/ab60da51114fe57089b29feb676c35f7/mdai-gpt-4-api-demo.ipynb">Using GPT 3.5</a> or <a href="https://colab.research.google.com/gist/georgezero/c5582934e980eeabcf38ad6d648cc4d9/mdai-gpt-4-api-demo.ipynb">Compare both side-by-side</a>, thanks to <a href="https://www.linkedin.com/in/georgenyc/">Dr. George Shih</a>.</li>
 </ul>
 <h2 id="keep-in-mind">Keep in mind...</h2>
-<p>Please note that ChatGPT's generated code only serves a starting point and may not work as-is against the Hackathon server for a variety of reasons. Some basic troubleshooting and minor tweaks might be necessary. Don't be afraid to ask for help if you get stuck!</p>
+<p>Please note that OpenAI's GPT generated code only serves a starting point and may not work as-is against the Hackathon server for a variety of reasons. Some basic troubleshooting and minor tweaks might be necessary. Don't be afraid to ask for help if you get stuck!</p>
 <h2 id="aknowledgements">Aknowledgements</h2>
 <p>This guide, and API access would not be possible with the help of some awesome people!!</p>
 <ol>
-<li><a href="https://md.ai">MD.ai</a> and especially <a href="https://www.linkedin.com/in/georgenyc/">Dr. George Shih</a> generously sharing ChatGPT API access.</li>
+<li><a href="https://md.ai">MD.ai</a> and especially <a href="https://www.linkedin.com/in/georgenyc/">Dr. George Shih</a> generously sharing OpenAI GPT API access.</li>
 <li><a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a> taking time to diligently document and test the steps involved in this process.</li>
 <li><a href="https://www.linkedin.com/in/stephanie-hou-5269201a9/">Dr. Stephanie Hou</a> for reviewing, editing, commenting, making suggestions, etc.</li>
 </ol>
