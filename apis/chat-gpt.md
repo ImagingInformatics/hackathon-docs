@@ -43,7 +43,7 @@ Go to [siim.md.ai](https://siim.md.ai/) and sign up for a free account. Once log
 
 ## Sample Notebooks
 * A more detailed version of this guide, [Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon](https://colab.research.google.com/gist/georgezero/2e52ca00dcfade8ec4dad553657074a7/using-gpt-for-medical-imaging-and-data-analysis-in-the-siim-hackathon-rev-20230606.ipynb), thanks to [Dr. Howard Chen](https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/)
-* Example asking GPT to generate a Jupyter Notebook doing FHIR and DICOMweb API Calls. One [Using GPT 4](https://colab.research.google.com/gist/georgezero/5e47d843357fa57286ef8c25e13c25b2/mdai-gpt-4-api-demo.ipynb) and another [Using GPT 3.5](https://colab.research.google.com/gist/georgezero/ab60da51114fe57089b29feb676c35f7/mdai-gpt-4-api-demo.ipynb) or [Compare both side-by-side](https://colab.research.google.com/gist/georgezero/c5582934e980eeabcf38ad6d648cc4d9/mdai-gpt-4-api-demo.ipynb), thanks to [Dr. George Shih](https://www.linkedin.com/in/georgenyc/).
+* Example asking GPT to generate a Jupyter Notebook doing FHIR and DICOMweb API Calls. One [Using GPT 4](https://colab.research.google.com/gist/georgezero/98069d9133b2d45b90d03dd53bc488dc/mdai-gpt-4-api-siim-hackathon-2023-example-rev-20230606.ipynb) and another [Using GPT 3.5 side-by-side with GPT 4](https://colab.research.google.com/gist/georgezero/f9d87413469663b37a5801968d027596/mdai-gpt4-and-gpt35-api-siim-hackathon-2023-example-ipynb-rev-20230606.ipynb), thanks to [Dr. George Shih](https://www.linkedin.com/in/georgenyc/).
 
 ## Keep in mind...
 
