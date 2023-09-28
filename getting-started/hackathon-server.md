@@ -1,5 +1,5 @@
 # Before we start...
-If you have not signed the participant agreement yet, that would be the first thing you should do - [Hackathon Agreement](https://siim.org/page/hackathon_agreement). Once you have the signed the agreement, an email will be sent to you with your API key.
+If you have not signed the participant agreement yet, that would be the first thing you should do - [Hackathon Agreement](https://siim.org/learning-events/events/hackathon/siim-hackathon-api-platform-participant-agreement/). Once you have the signed the agreement, an email will be sent to you with your API key.
 
 Secondly, don't forget to join the conversation on [Slack](https://join.slack.com/t/siimhackathon/shared_invite/zt-mkk0yn2e-KUqOLi6ETBUQmOffxmcQxA). Keep an eye on the different [hackathon events](https://siim.org/page/hacking_healthcare) as listed on the website to get the most out of it.
 
