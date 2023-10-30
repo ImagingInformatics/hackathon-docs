@@ -4,8 +4,6 @@ If you have not signed the participant agreement yet, that would be the first th
 Secondly, don't forget to join the conversation on [Slack](https://join.slack.com/t/siimhackathon/shared_invite/zt-mkk0yn2e-KUqOLi6ETBUQmOffxmcQxA). Keep an eye on the different [hackathon events](https://siim.org/page/hacking_healthcare) as listed on the website to get the most out of it.
 
 ## New to REST APIs?
-Check out this [Primer on REST APIs](https://siim.org/resource/resmgr/hackathon/SIIM2014_REST_Primer.pdf).
-
 Wondering what's all this hype about the new standards - check our [5-minute starting guide for FHIR](../apis/fhir-intro.md) as well as [starting guide for DICOMweb](../apis/dicom-web-intro.md). You won't believe how easy and quick it is to get started!
 
 # Using the SIIM Hackathon Server
