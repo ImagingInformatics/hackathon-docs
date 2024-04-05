@@ -1,5 +1,5 @@
 # 2024 SIIM Hackathon
-The SIIM Hackathon returns in 2024 in **hybrid** again, taking place Thursday, June 20th through Saturday June 29th. Everyone is welcome - No coding experience required! The hybrid format allows people to participate 100% virtually but also provides some optional in-person activities at [SIIM 24](https://annualmeeting.siim.org/). More information about the 2024 Hackathon will soon be available on the [SIIM Hackathon Page](https://siim.org/learning-events/events/hackathon/).
+The SIIM Hackathon returns in 2024 in **hybrid** again, taking place Thursday, June 20th through Saturday June 29th. Everyone is welcome - No coding experience required! The hybrid format allows people to participate 100% virtually but also provides some optional in-person activities at [SIIM 24](https://annualmeeting.siim.org/). More information about the 2024 Hackathon is now available on the [SIIM Hackathon Page](https://siim.org/learning-events/events/hackathon/) - click on the "register" green button on the right-hand side.
 
 
 The SIIM Hackathon is open to all walks of life, whether you are clinical, technical or something else - we want YOU! In true SIIM spirit, the hackathon is focused on education and collaboration above all else. Come in groups or individually - we can pair you with others. The hackathon is not a full-time engagement, meaning, you can join us with any amount of free time you have.
@@ -8,9 +8,9 @@ The SIIM Hackathon features imaging informatics APIs like DICOMweb and FHIR amon
 
 ## How can I participate?
 
-Go to [https://siim.org/learning-events/events/hackathon/](https://siim.org/learning-events/events/hackathon/) and ensure you are registered for the hackathon sessions like the *kickoff* and *brainstorming* sessions at a bare minimum. At those sessions, we'll help you find you way.
+Go to the [Hackathon page on siim.org]](https://siim.org/learning-events/events/hackathon/) and ensure you are registered for the hackathon via the green registration button on the right-hand side. We'll then get in touch with you to announce upcoming sessions of interest.
 
-Don't forget to join the conversation on [Slack](https://join.slack.com/t/siimhackathon/shared_invite/zt-mkk0yn2e-KUqOLi6ETBUQmOffxmcQxA). 
+Additionally, don't forget to join the conversation on [Slack](https://join.slack.com/t/siimhackathon/shared_invite/zt-mkk0yn2e-KUqOLi6ETBUQmOffxmcQxA). 
 
 For inspiration of ideas to implement, check this [list of hackathon project ideas](https://docs.google.com/spreadsheets/d/160Ph4t0BxKb1L-Mv_Bq7867yHEXonBxrslgUf-EixmY/edit?usp=sharing).
 
