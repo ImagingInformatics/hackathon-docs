@@ -16,8 +16,10 @@ We recommend using [Postman](https://www.postman.com/) for working with RESTful 
 
 
 ## FHIR: 
-* Endpoint: `https://hackathon.siim.org/fhir/`
-* Overview of FHIR objects/resources at: [https://hackathon.siim.org/](https://hackathon.siim.org/) (requires [browser plugin](./mod-header.md))
+* Endpoint: 
+    * R5: `https://hackathon.siim.org/fhir/`
+    * R4: `https://hackathon.siim.org/fhir-r4/`
+* Overview of FHIR objects/resources at: [https://hackathon.siim.org/](https://hackathon.siim.org/) (requires [browser plugin](./mod-header.md)). This is only available for R5.
 * Server powered by [HAPI FHIR](http://hapifhir.io/)
 
 ## DICOMweb: 

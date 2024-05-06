@@ -24,5 +24,5 @@ If you need help outside the hackathon event or for any other urgent matters ple
 
 ## Some things to keep in mind!
 * SIIM's hackathon dataset provides **ten** cohesive patient stories that connect the FHIR and DICOMweb resources like a real-life patient would have. Search for patients with last name `SIIM`.
-*  Our FHIR server features version R4 of the standard (latest), we expect to have an R5 version closer to June 2024.
+*  Our FHIR server features versions R5 (latest) and R4 of the standard.
 * Our DICOMweb server may not support every feature described in the DICOMweb specifications. Check [here](https://hg.orthanc-server.com/orthanc-dicomweb/file/tip/Status.txt) for more details.
