@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>FHIR Intro - SIIM Hackathon Documentation</title>
+    <title>How To Convert DICOM To JPG or PNG - SIIM Hackathon Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "FHIR Intro";
-        var mkdocs_page_input_path = "apis/fhir-intro.md";
+        var mkdocs_page_name = "How To Convert DICOM To JPG or PNG";
+        var mkdocs_page_input_path = "apis/dicom-to-jpg-png.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -58,28 +58,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">APIs</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">FHIR Intro</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#fhir-concepts">FHIR Concepts</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#dont-forget">Don't forget...</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#1-a-hello-world-example">1. A Hello World example</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-finding-imaging-studies-of-a-given-patient">2. Finding "Imaging Studies" of a given patient</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-switch-return-format-between-xml-and-json">3. Switch return format between XML and JSON</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#would-you-like-to-see-some-sample-code">Would you like to see some sample code?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../fhir-intro/">FHIR Intro</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../dicom-web-intro/">DICOMweb Intro</a>
                   </li>
@@ -115,10 +95,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">APIs</li>
-      <li class="breadcrumb-item active">FHIR Intro</li>
+      <li class="breadcrumb-item active">How To Convert DICOM To JPG or PNG</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/fhir-intro.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/dicom-to-jpg-png.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -126,41 +105,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="5-minute-fhir-starting-guide">5-Minute FHIR Starting Guide</h1>
-<h2 id="fhir-concepts">FHIR Concepts</h2>
-<p>All FHIR calls are based on retrieving resources. There are many different types of resources for data you would like to retrieve, including patient information, orders, reports, results, and more.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<ol>
-<li><a href="../../getting-started/hackathon-server/">SIIM Hackathon API key</a></li>
-<li>(Optional) <a href="https://www.postman.com/">Postman</a></li>
-</ol>
-<h3 id="dont-forget">Don't forget...</h3>
-<p>When making requests against the end points below, ensure you include an HTTP header like so: </p>
-<p><code>apikey: [your API key]</code></p>
-<p>If you don't have a SIIM Hackathon API key, see <a href="../../getting-started/hackathon-server/">Hackathon Server</a>.</p>
-<h2 id="1-a-hello-world-example">1. A Hello World example</h2>
-<p>A simple Hello World type query for FHIR, would look as follows, to query for all patients with the last name of <strong>SIIM</strong>: </p>
-<p><code>http://hackathon.siim.org/fhir/Patient?name=SIIM</code></p>
-<h2 id="2-finding-imaging-studies-of-a-given-patient">2. Finding "Imaging Studies" of a given patient</h2>
-<p>Once you've picked a patient to download, extract the patient ID by using the ID field from the response and you can download available studies by making a subsequent ImagingStudy query: </p>
-<p><code>http://hackathon.siim.org/fhir/ImagingStudy?patient=siimandy</code></p>
-<h2 id="3-switch-return-format-between-xml-and-json">3. Switch return format between XML and JSON</h2>
-<p>If you want to control the format of the server response, add an <code>Accept</code> header with <code>application/json</code> for JSON or <code>text/xml</code> for XML.</p>
-<h2 id="would-you-like-to-see-some-sample-code">Would you like to see some sample code?</h2>
-<p>Who wouldn't? Right?!? Have a look at <a href="https://replit.com/@mohannadhussain/fhir-example">https://replit.com/@mohannadhussain/fhir-example</a></p>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="https://www.hl7.org/fhir/index.html">FHIR Home Page</a></li>
-<li><a href="https://www.hl7.org/fhir/search.html">Searching using FHIR</a></li>
-<li><a href="https://www.hl7.org/fhir/patient.html">Patient Resource</a></li>
-</ul>
+                <h1 id="how-to-convert-dicom-to-jpg-or-png">How To Convert DICOM To JPG or PNG</h1>
+<h2 id="introduction">Introduction</h2>
+<p>DICOM is a container, which in the combines a header (metadata like patient ID, study date, etc) with pixel data (i.e. the image itself). The latter may be uncompressed data (i.e. bitmap) or could be compressed into one of the many codecs suported by the DICOM standard, such as JPEG-LS, JPEG 2000 and more recently High-Throughout JPEG 2000 (HTJ2K). Sometimes it is easier to extract the pixel data into a simple JPG or PNG file to work with the images, how to do so is described in this article via two methods: 1) DICOMweb and 2) Command-line utilities. You could also achieve the same things via code/scripting using a DICOM library but that's out of scope for this article.</p>
+<p>Do remember that DICOM may not always contain pixel data. There are types of DICOM objects which are purley metadata-based like Structured Reports (SR) and Key-Object Selection (KOS) as two examples.</p>
+<h3 id="1-extracting-jpgpng-via-dicomweb">1. Extracting JPG/PNG Via DICOMweb</h3>
+<p>Check your server's DICOM conformance statement to ensure it supports the <code>/rendered</code> call in WADO-RS. See the <a href="https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri">DICOM standard</a> for more details. We use <a href="https://www.orthanc-server.com/">Orthanc</a> and know that it supports this call.</p>
+<p>If your server supports this endpoint, then the rest is easy! You can just set a <code>GET</code> call using the following URL format (replace the UIDs in curly brackets with the values you're working with):</p>
+<pre><code>/studies/{Study Instance UID}/series/{Series Instance UID}/instances/{SOP Instance UID}/rendered
+</code></pre>
+<p>and add an <code>Accept</code> header with either <code>image/jpeg</code> or <code>image/png</code> depending on what you want, and that should be all!</p>
+<h4 id="dicomweb-example">DICOMweb Example</h4>
+<p>Here's a working example from the <a href="../../getting-started/hackathon-server/">SIIM Hackathon Server</a>. It required a valid hackathon API key:</p>
+<pre><code>https://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.6279.6001.300027087262813745730072134723/series/1.3.6.1.4.1.14519.5.2.1.6279.6001.513114548408601984123939083099/instances/1.3.6.1.4.1.14519.5.2.1.6279.6001.197993217821785409800235232773/rendered
+</code></pre>
+<p>By default, Orthanc returns a JPEG image, but you can change that with:</p>
+<pre><code>Accept: image/png
+</code></pre>
+<p>You can try this via tools like <a href="https://www.postman.com/">Postman</a>, <a href="https://insomnia.rest/">Insomnia</a>, etc.</p>
+<h3 id="2-extracting-jpgpng-via-command-line-interface-cli-utilities">2. Extracting JPG/PNG Via Command-Line Interface (CLI) Utilities</h3>
+<p>For this, we'll be using the excellent <a href="https://web.dcm4che.org/dcm4che-utilities">dcm4che CLI toolkit</a>. This toolkit works on Windows, Mac and Linux (even headless servers). You can download the latest and greatest verion of dcm4che <a href="https://sourceforge.net/projects/dcm4che/files/dcm4che3/">here</a> (you'll want to download the file ending with <code>-bin.zip</code>).</p>
+<p>Once downloaded, you can run <code>dcm2jpg</code> and point it to a DICOM file to export the pixel data like so:</p>
+<pre><code>./dcm4che-5.23.2/bin/dcm2jpg /path/to/dicom-file.dcm
+</code></pre>
+<p>Find more information on dcm2jpg <a href="https://github.com/dcm4che/dcm4che/blob/master/dcm4che-tool/dcm4che-tool-dcm2jpg/README.md">here</a> or by running <code>dcm2jpg --help</code></p>
+<h4 id="cli-example">CLI Example</h4>
+<p>Assuming you have both dcm4che and this <a href="https://github.com/ImagingInformatics/hackathon-images/blob/master/Ravi%20SIIM/W_Chest_PA_3172/IM-0031-0001.dcm">sample hackathon image</a> downloaded to the current folder (and dcm4che unzipped). You can run the following to export to JPEG:</p>
+<pre><code>./dcm4che-5.23.2/bin/dcm2jpg IM-0031-0001.dcm IM-0031-0001.jpg
+</code></pre>
+<p>Or, the following to go with PNG instead:</p>
+<pre><code>./dcm4che-5.23.2/bin/dcm2jpg -F PNG IM-0031-0001.dcm IM-0031-0001.jpg
+</code></pre>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../whats-new/2021/" class="btn btn-neutral float-left" title="2021"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../dicom-web-intro/" class="btn btn-neutral float-right" title="DICOMweb Intro">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -186,10 +164,6 @@
         </span>
     
     
-      <span><a href="../../whats-new/2021/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../dicom-web-intro/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

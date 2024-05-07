@@ -69,6 +69,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../apis/dicom-web-stow/">DICOMweb STOW</a>
                   </li>
+                  <li class="toctree-l1"><a class="" href="../../api/dicom-to-jpg-png.md">DICOM to JPG/PNG</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../apis/chat-gpt/">ChatGPT</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../apis/ethereum-blockchain-intro/">Ethereum Intro</a>
@@ -119,8 +121,12 @@
 <p>We recommend using <a href="https://www.postman.com/">Postman</a> for working with RESTful APIs, such as FHIR and DICOMweb. You can use Postman to get your API calls working, then Postman can export into code in your favourite language (Python, Javascript, etc.)</p>
 <h2 id="fhir">FHIR:</h2>
 <ul>
-<li>Endpoint: <code>https://hackathon.siim.org/fhir/</code></li>
-<li>Overview of FHIR objects/resources at: <a href="https://hackathon.siim.org/">https://hackathon.siim.org/</a> (requires <a href="../mod-header/">browser plugin</a>)</li>
+<li>Endpoint: <ul>
+<li>R5: <code>https://hackathon.siim.org/fhir/</code></li>
+<li>R4: <code>https://hackathon.siim.org/fhir-r4/</code></li>
+</ul>
+</li>
+<li>Overview of FHIR objects/resources at: <a href="https://hackathon.siim.org/">https://hackathon.siim.org/</a> (requires <a href="../mod-header/">browser plugin</a>). This is only available for R5.</li>
 <li>Server powered by <a href="http://hapifhir.io/">HAPI FHIR</a></li>
 </ul>
 <h2 id="dicomweb">DICOMweb:</h2>
