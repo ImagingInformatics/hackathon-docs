@@ -1,9 +1,11 @@
-# How To Convert DICOM To JPG or PNG
+# How To Extract a JPG or PNG from a DICOM Image
 
 ## Introduction
-DICOM is a container, which combines a header (metadata like patient ID, study date, etc) with pixel data (i.e. the image itself). The latter may be uncompressed data (i.e. bitmap) or could be compressed into one of the many codecs suported by the DICOM standard, such as JPEG-LS, JPEG 2000 and more recently High-Throughput JPEG 2000 (HTJ2K). Sometimes it is easier to extract the pixel data into a simple JPG or PNG file to work with the images, and how to do so is described in this article via two methods: 1) DICOMweb and 2) Command-line utilities. You could also achieve the same things via code/scripting using a DICOM library but that's out of scope for this article.
+A DICOM Image is a container, which combines a header (metadata like patient ID, study date, etc) with pixel data (i.e. the image itself). The latter may be uncompressed (i.e. bitmap) or compressed with one of the many codecs suported by the DICOM standard, such as JPEG-LS or High-Throughput JPEG 2000 (HTJ2K). 
 
-*Note:* do remember that DICOM may not always contain pixel data. There are types of DICOM objects which are purley metadata-based like Structured Reports (SR) and Key-Object Selection (KOS) as two examples.
+To process pixels, it may be easier to extract the pixel data into a simple JPG or PNG file. Two methods are described here: 1) DICOMweb and 2) Command-line utilities. Code/scripting using a DICOM library would also work, but that's out of scope for this article.
+
+*Note:* Not all DICOM objects contain pixel data. Some are purely metadata, like Structured Reports (SR) and Key Object Selections (KOS).
 
 ### 1. Extracting JPG/PNG Via DICOMweb
 Check your server's DICOM conformance statement to ensure it supports the `/rendered` call in WADO-RS. See the [DICOM standard](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri) for more details. We use [Orthanc](https://www.orthanc-server.com/) and know that it supports this call.
