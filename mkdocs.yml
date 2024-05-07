@@ -19,7 +19,7 @@ nav:
         - FHIR Intro: apis/fhir-intro.md
         - DICOMweb Intro: apis/dicom-web-intro.md
         - DICOMweb STOW: apis/dicom-web-stow.md
-        - DICOM to JPG/PNG: api/dicom-to-jpg-png.md
+        - DICOM to JPG/PNG: apis/dicom-to-jpg-png.md
         - ChatGPT: apis/chat-gpt.md
         - Ethereum Intro: apis/ethereum-blockchain-intro.md
         - Other APIs/Standards: apis/other-apis-and-standards.md
