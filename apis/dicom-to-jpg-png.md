@@ -3,6 +3,11 @@
 ## Introduction
 DICOM is a container, which combines a header (metadata like patient ID, study date, etc) with pixel data (i.e. the image itself). The latter may be uncompressed data (i.e. bitmap) or could be compressed into one of the many codecs suported by the DICOM standard, such as JPEG-LS, JPEG 2000 and more recently High-Throughput JPEG 2000 (HTJ2K). Sometimes it is easier to extract the pixel data into a simple JPG or PNG file to work with the images, and how to do so is described in this article via two methods: 1) DICOMweb and 2) Command-line utilities. You could also achieve the same things via code/scripting using a DICOM library but that's out of scope for this article.
 
+If you'd like to dig deeper into this topic, see the following links into the DICOM standard:
+1. [Rendered Resources](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_10.4.html#sect_10.4.1.1.3)
+2. [Query Parameters For Rendered Resources](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1)
+3. [Rendered Media Types](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.7.4.html)
+
 *Note:* do remember that DICOM may not always contain pixel data. There are types of DICOM objects which are purley metadata-based like Structured Reports (SR) and Key-Object Selection (KOS) as two examples.
 
 ### 1. Extracting JPG/PNG Via DICOMweb
