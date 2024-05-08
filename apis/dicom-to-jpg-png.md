@@ -42,6 +42,8 @@ Once downloaded, you can run `dcm2jpg` and point it to a DICOM file to export th
 
 Find more information on dcm2jpg [here](https://github.com/dcm4che/dcm4che/blob/master/dcm4che-tool/dcm4che-tool-dcm2jpg/README.md) or by running `dcm2jpg --help`
 
+*Note:* Other DICOM toolkits have support for this as well. See the [dcmtk equivalent](https://support.dcmtk.org/docs/dcmj2pnm.html).
+
 #### CLI Example
 Assuming you have both dcm4che and this [sample hackathon image](https://github.com/ImagingInformatics/hackathon-images/blob/master/Ravi%20SIIM/W_Chest_PA_3172/IM-0031-0001.dcm) downloaded to the current folder (and dcm4che unzipped). You can run the following to export to JPEG:
 ```
