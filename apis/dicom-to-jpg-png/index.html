@@ -61,6 +61,8 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../fhir-intro/">FHIR Intro</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fhircast-and-cds-hooks/">FHIR-related Technologies</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../dicom-web-intro/">DICOMweb Intro</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../dicom-web-stow/">DICOMweb STOW</a>
@@ -127,6 +129,10 @@
                 <h1 id="how-to-convert-dicom-to-jpg-or-png">How To Convert DICOM To JPG or PNG</h1>
 <h2 id="introduction">Introduction</h2>
 <p>DICOM is a container, which combines a header (metadata like patient ID, study date, etc) with pixel data (i.e. the image itself). The latter may be uncompressed data (i.e. bitmap) or could be compressed into one of the many codecs suported by the DICOM standard, such as JPEG-LS, JPEG 2000 and more recently High-Throughput JPEG 2000 (HTJ2K). Sometimes it is easier to extract the pixel data into a simple JPG or PNG file to work with the images, and how to do so is described in this article via two methods: 1) DICOMweb and 2) Command-line utilities. You could also achieve the same things via code/scripting using a DICOM library but that's out of scope for this article.</p>
+<p>If you'd like to dig deeper into this topic, see the following links into the DICOM standard:
+1. <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_10.4.html#sect_10.4.1.1.3">Rendered Resources</a>
+2. <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1">Query Parameters For Rendered Resources</a>
+3. <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.7.4.html">Rendered Media Types</a></p>
 <p><em>Note:</em> do remember that DICOM may not always contain pixel data. There are types of DICOM objects which are purley metadata-based like Structured Reports (SR) and Key-Object Selection (KOS) as two examples.</p>
 <h3 id="1-extracting-jpgpng-via-dicomweb">1. Extracting JPG/PNG Via DICOMweb</h3>
 <p>Check your server's DICOM conformance statement to ensure it supports the <code>/rendered</code> call in WADO-RS. See the <a href="https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri">DICOM standard</a> for more details. We use <a href="https://www.orthanc-server.com/">Orthanc</a> and know that it supports this call.</p>

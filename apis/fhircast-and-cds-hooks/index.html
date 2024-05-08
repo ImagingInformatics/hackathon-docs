@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>FHIR Intro - SIIM Hackathon Documentation</title>
+    <title>FHIR-related Technologies - SIIM Hackathon Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "FHIR Intro";
-        var mkdocs_page_input_path = "apis/fhir-intro.md";
+        var mkdocs_page_name = "FHIR-related Technologies";
+        var mkdocs_page_input_path = "apis/fhircast-and-cds-hooks.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -59,29 +59,17 @@
               </ul>
               <p class="caption"><span class="caption-text">APIs</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">FHIR Intro</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../fhir-intro/">FHIR Intro</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">FHIR-related Technologies</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#fhir-concepts">FHIR Concepts</a>
+    <li class="toctree-l2"><a class="reference internal" href="#fhircast">FHIRcast</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#dont-forget">Don't forget...</a>
+    <li class="toctree-l2"><a class="reference internal" href="#smart-on-fhir">SMART on FHIR</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#1-a-hello-world-example">1. A Hello World example</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-finding-imaging-studies-of-a-given-patient">2. Finding "Imaging Studies" of a given patient</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-switch-return-format-between-xml-and-json">3. Switch return format between XML and JSON</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#would-you-like-to-see-some-sample-code">Would you like to see some sample code?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a>
+    <li class="toctree-l2"><a class="reference internal" href="#cds-hooks">CDS Hooks</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../fhircast-and-cds-hooks/">FHIR-related Technologies</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../dicom-web-intro/">DICOMweb Intro</a>
                   </li>
@@ -118,9 +106,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">APIs</li>
-      <li class="breadcrumb-item active">FHIR Intro</li>
+      <li class="breadcrumb-item active">FHIR-related Technologies</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/fhir-intro.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/fhircast-and-cds-hooks.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -128,40 +116,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="5-minute-fhir-starting-guide">5-Minute FHIR Starting Guide</h1>
-<h2 id="fhir-concepts">FHIR Concepts</h2>
-<p>All FHIR calls are based on retrieving resources. There are many different types of resources for data you would like to retrieve, including patient information, orders, reports, results, and more.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<ol>
-<li><a href="../../getting-started/hackathon-server/">SIIM Hackathon API key</a></li>
-<li>(Optional) <a href="https://www.postman.com/">Postman</a></li>
-</ol>
-<h3 id="dont-forget">Don't forget...</h3>
-<p>When making requests against the end points below, ensure you include an HTTP header like so: </p>
-<p><code>apikey: [your API key]</code></p>
-<p>If you don't have a SIIM Hackathon API key, see <a href="../../getting-started/hackathon-server/">Hackathon Server</a>.</p>
-<h2 id="1-a-hello-world-example">1. A Hello World example</h2>
-<p>A simple Hello World type query for FHIR, would look as follows, to query for all patients with the last name of <strong>SIIM</strong>: </p>
-<p><code>http://hackathon.siim.org/fhir/Patient?name=SIIM</code></p>
-<h2 id="2-finding-imaging-studies-of-a-given-patient">2. Finding "Imaging Studies" of a given patient</h2>
-<p>Once you've picked a patient to download, extract the patient ID by using the ID field from the response and you can download available studies by making a subsequent ImagingStudy query: </p>
-<p><code>http://hackathon.siim.org/fhir/ImagingStudy?patient=siimandy</code></p>
-<h2 id="3-switch-return-format-between-xml-and-json">3. Switch return format between XML and JSON</h2>
-<p>If you want to control the format of the server response, add an <code>Accept</code> header with <code>application/json</code> for JSON or <code>text/xml</code> for XML.</p>
-<h2 id="would-you-like-to-see-some-sample-code">Would you like to see some sample code?</h2>
-<p>Who wouldn't? Right?!? Have a look at <a href="https://replit.com/@mohannadhussain/fhir-example">https://replit.com/@mohannadhussain/fhir-example</a></p>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="https://www.hl7.org/fhir/index.html">FHIR Home Page</a></li>
-<li><a href="https://www.hl7.org/fhir/search.html">Searching using FHIR</a></li>
-<li><a href="https://www.hl7.org/fhir/patient.html">Patient Resource</a></li>
-</ul>
+                <h1 id="fhir-related-technologies">FHIR-related Technologies</h1>
+<p>Although the FHIR standard solves many problems, some were out of scope for the core standard. Therefore, there are technologies adjacent to FHIR-itself to help with certain use cases.</p>
+<h2 id="fhircast">FHIRcast</h2>
+<p>When clinicians work on a computer, they typically find themselves working in multiple applications on the same patient record(s). Take Radiologists for example, they would typically have three applications open:
+1. Electronic Medical Record (EMR) to reference the patient's record. E.g. patient demographics, medical history and medications.
+2. Picture Archiving and Communication System (PACS) client to review/read the actual Radiology images.
+3. Reporting application, sometimes called voice recognition (VR) because they typically dictate reports via microphone rather than type them in on a keyboard.
+All these applications ALREADY talk to each other on the backend, i.e. server to server. However, they also need to talk to each other directly on the computer itself, i.e. the front-end. Sometimes this is called a desktop integration, or context synhronization.</p>
+<p>A previous standard named CCOW largely failed to standardadize these desktop integrations. So FHIRcast was conceived as a fresh attempt to inject interoperability into these integrations, and so far it is gaining plenty of momentum and real-world implementations.</p>
+<p>Find out more via <a href="https://fhircast.org/">FHIRcast's homepage</a>.</p>
+<h2 id="smart-on-fhir">SMART on FHIR</h2>
+<p>A common workflow is the need for an end user, e.g. clinician, to launch an application right from within the EMR in context. The launched application would provide additional functionality, e.g. an application to help manage diabetic patients. The industry had figured out ways to launch such apps in context (i.e. launch it with parameters so it displays the current patients' record). However, not only were these implementations non-standardized, they also left more to be desired (which, you guessed it, SMART on FHIR solves for):
+1. Single-Sign On (SSO) so the end user does not have to re-enter their password.
+2. More than just contextual launch, but rather locking the launched application scope to a specific scope. For example, the launched app should only be able to diplay information about patient X during this given session.</p>
+<p>Here's a <a href="https://smarthealthit.org/smart-on-fhir-api/">quick primer on SMART on FHIR</a>, as well as some <a href="https://docs.smarthealthit.org/">documentation</a>.</p>
+<h2 id="cds-hooks">CDS Hooks</h2>
+<p>Although EMRs have grown to be very comprehensive, there are still use cases that need specialized software. As you've seen above, SMART on FHIR solves for launching another application from within the EMR. But what about a less disruptive workflow the seamlessly blends in? Enter CDS Hooks. </p>
+<p>CDS Hooks allow the EMR to send notifications to other software without launching them outright. These notifications are fired off based on triggers (example coming soon). The other software (sometimes called remote service) can then request the EMR to show a "card" (i.e. pop-up notifications), which could show one of three things:
+1. Simple text-based card
+2. Card combining text along with a suggestion
+3. Card combining text along with a link to launch a SMART on FHIR app.</p>
+<p>Here's a practical example of how this would be useful in the real world. Say the clinician is about to prescribe medication to their patient. The action of creating a prescribtion triggers a notification to a another software which knows to check the patient's record for existing medications and potential clashes/allergies/toxicity. That software can then decide to have the EMR show cards based on the outcome:
+1. Simple card telling the clinician the new medicaiton is OK to prescribe, which is reassuring.
+2. Card suggesting another medication. It could be due to insruance coverage differences, or perhaps the patient has allergies to certain drugs.
+3. Say the other software needed to present the clinician with additional information (extra paperwork required to prescribe this drug to override a detected clash), it could present a card with a link to launch the software's user interface.</p>
+<p>Read more about <a href="https://cds-hooks.org/">CDS Hooks via their homepage</a>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../whats-new/2021/" class="btn btn-neutral float-left" title="2021"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../fhircast-and-cds-hooks/" class="btn btn-neutral float-right" title="FHIR-related Technologies">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../fhir-intro/" class="btn btn-neutral float-left" title="FHIR Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dicom-web-intro/" class="btn btn-neutral float-right" title="DICOMweb Intro">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -188,10 +174,10 @@
         </span>
     
     
-      <span><a href="../../whats-new/2021/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../fhir-intro/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../fhircast-and-cds-hooks/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../dicom-web-intro/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
