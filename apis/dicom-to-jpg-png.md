@@ -5,7 +5,14 @@ A DICOM Image is a container, which combines a header (metadata like patient ID,
 
 To process pixels, it may be easier to extract the pixel data into a simple JPG or PNG file. Two methods are described here: 1) DICOMweb and 2) Command-line utilities. Code/scripting using a DICOM library would also work, but that's out of scope for this article.
 
+If you'd like to dig deeper into this topic, see the following links into the DICOM standard:
+
+1. [Rendered Resources](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_10.4.html#sect_10.4.1.1.3)
+2. [Query Parameters For Rendered Resources](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1)
+3. [Rendered Media Types](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.7.4.html)
+
 *Note:* Not all DICOM objects contain pixel data. Some are purely metadata, like Structured Reports (SR) and Key Object Selections (KOS).
+
 
 ### 1. Extracting JPG/PNG Via DICOMweb
 Check your server's DICOM conformance statement to ensure it supports the `/rendered` call in WADO-RS. See the [DICOM standard](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri) for more details. We use [Orthanc](https://www.orthanc-server.com/) and know that it supports this call.
@@ -37,6 +44,8 @@ Once downloaded, you can run `dcm2jpg` and point it to a DICOM file to export th
 ```
 
 Find more information on dcm2jpg [here](https://github.com/dcm4che/dcm4che/blob/master/dcm4che-tool/dcm4che-tool-dcm2jpg/README.md) or by running `dcm2jpg --help`
+
+*Note:* Other DICOM toolkits have support for this as well. See the [dcmtk equivalent](https://support.dcmtk.org/docs/dcmj2pnm.html).
 
 #### CLI Example
 Assuming you have both dcm4che and this [sample hackathon image](https://github.com/ImagingInformatics/hackathon-images/blob/master/Ravi%20SIIM/W_Chest_PA_3172/IM-0031-0001.dcm) downloaded to the current folder (and dcm4che unzipped). You can run the following to export to JPEG:

@@ -17,6 +17,7 @@ nav:
         - 2021: whats-new/2021.md
     - APIs:
         - FHIR Intro: apis/fhir-intro.md
+        - FHIR-related Technologies: apis/fhircast-and-cds-hooks.md
         - DICOMweb Intro: apis/dicom-web-intro.md
         - DICOMweb STOW: apis/dicom-web-stow.md
         - DICOM to JPG/PNG: apis/dicom-to-jpg-png.md
