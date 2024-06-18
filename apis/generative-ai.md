@@ -51,7 +51,11 @@ Your results will be served back in JSON format.
 See the Sample Notebooks section below for working code examples.
 
 ### Getting an API Key
-Go to [siim.md.ai/chat](https://siim.md.ai/chat) and sign up for a free account. Once logged in, click the settings (gear) icon in the top right corner and select `Access Tokens`. There, click `+ Generate` to generate a new token, give it a name (e.g. `my token`) then click `Confirm`. Once that's done, copy the token displayed and save it somewhere handy. Afterward, you can use it in your code and/or API calls as your MD.ai API key.
+1. Go to [siim.md.ai/chat](https://siim.md.ai/chat) and sign up for a free account. 
+2. Once logged in, click the settings (gear) icon in the top right corner and select `Access Tokens`. 
+3. There, click `+ Generate` to generate a new token, give it a name (e.g. `my token`) then click `Confirm`. 
+4. Once that's done, copy the token displayed and save it somewhere handy. 
+5. Use your token in your code and/or API calls as your MD.ai API key.
 
 ### Sample Notebooks
 * A more detailed version of this guide, [Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon](https://colab.research.google.com/gist/georgezero/2e52ca00dcfade8ec4dad553657074a7/using-gpt-for-medical-imaging-and-data-analysis-in-the-siim-hackathon-rev-20230606.ipynb), thanks to [Dr. Howard Chen](https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/)
