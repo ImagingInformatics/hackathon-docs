@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>ChatGPT - SIIM Hackathon Documentation</title>
+    <title>Generative AI - SIIM Hackathon Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "ChatGPT";
-        var mkdocs_page_input_path = "apis/chat-gpt.md";
+        var mkdocs_page_name = "Generative AI";
+        var mkdocs_page_input_path = "apis/generative-ai.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -69,23 +69,29 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../dicom-to-jpg-png/">DICOM to JPG/PNG</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">ChatGPT</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Generative AI</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#gpt-chatgpt-whats-the-difference">GPT? ChatGPT? What's The Difference?</a>
+    <li class="toctree-l2"><a class="reference internal" href="#nvidias-build-page">NVIDIA's Build Page</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    <li class="toctree-l2"><a class="reference internal" href="#generative-pretrained-transformer-gpt-aka-chatgpt">Generative Pretrained Transformer (GPT, aka ChatGPT)</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#gpt-35-vs-4">GPT 3.5 vs 4</a>
+    <li class="toctree-l3"><a class="reference internal" href="#gpt-chatgpt-whats-the-difference">GPT? ChatGPT? What's The Difference?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#gpt-35-vs-4">GPT 3.5 vs 4</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-to-use-the-chat-gpt-proxy">How to use the Chat GPT Proxy</a>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-use-the-chat-gpt-proxy">How to use the Chat GPT Proxy</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#getting-an-api-key">Getting an API Key</a>
+    <li class="toctree-l3"><a class="reference internal" href="#getting-an-api-key">Getting an API Key</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#sample-notebooks">Sample Notebooks</a>
+    <li class="toctree-l3"><a class="reference internal" href="#sample-notebooks">Sample Notebooks</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#keep-in-mind">Keep in mind...</a>
+    <li class="toctree-l3"><a class="reference internal" href="#keep-in-mind">Keep in mind...</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#aknowledgements">Aknowledgements</a>
     </li>
@@ -118,9 +124,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">APIs</li>
-      <li class="breadcrumb-item active">ChatGPT</li>
+      <li class="breadcrumb-item active">Generative AI</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/chat-gpt.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/ImagingInformatics/hackathon-docs/edit/main/apis/generative-ai.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -128,14 +134,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="generative-pretrained-transformer-gpt-aka-chatgpt">Generative Pretrained Transformer (GPT, aka ChatGPT)</h1>
-<h2 id="gpt-chatgpt-whats-the-difference">GPT? ChatGPT? What's The Difference?</h2>
+                <h1 id="generative-ai">Generative AI</h1>
+<p>On this page, we'll list a number of Generative AI (e.g. Large Language Model) that you can access. They are: GPT (aka ChatGPT), NVIDIA's build page and more will come soon.</p>
+<h2 id="nvidias-build-page">NVIDIA's Build Page</h2>
+<p>NVIDIA hosts a number of open-source Generative AI models at <a href="https://build.nvidia.com/">build.nvidia.com</a>. The models range from Large Language Models (e.g. llama) to visual models (generate images based on textual prompts) and many other categories. Additionally, the website allows you to try out the different models without having to login. It makes for a nice way to get a feel for what each model is capable of, but also to try these models before you invest time/money into hosting your own copy of them. </p>
+<h2 id="generative-pretrained-transformer-gpt-aka-chatgpt">Generative Pretrained Transformer (GPT, aka ChatGPT)</h2>
+<h3 id="gpt-chatgpt-whats-the-difference">GPT? ChatGPT? What's The Difference?</h3>
 <p>GPT, or Generative Pre-trained Transformer, is a language model architecture developed by OpenAI. It is trained on a large corpus of text data to generate coherent and contextually relevant responses to given prompts. When you use the API to query the server, you are interacting with a GPT model.  GPT has many variants, each specialized to do something slightly different, including Chat Completion, which brings us to... ChatGPT generally refers to a non-API consumer interface using GPT specifically designed for conversational interactions. It focuses on generating coherent responses in a conversational context. ChatGPT is fine-tuned using reinforcement learning from human feedback to improve the quality of its responses. This fine-tuning process helps ChatGPT produce more engaging and contextually appropriate replies during conversational exchanges.</p>
-<h2 id="introduction">Introduction</h2>
+<h3 id="introduction">Introduction</h3>
 <p>Interested in trying out OpenAI's GPT? Thanks to our friends at <a href="https://md.ai/">MD.ai</a>, we have a proxy in place that allows you to perform API calls to both GPT versions 3.5 and 4.0. The proxy utilizes md.ai credits with every account starting with 1000 free credits. Go to <a href="https://siim.md.ai/">siim.md.ai</a> and sign up for a free account to secure your credits.</p>
 <p>This is a quick starting guide. If you want a more detailed version, please see <a href="https://colab.research.google.com/drive/1V_UthmhzQMR4GCQRuNUQGgHVp93iGCCw?usp=sharing">Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon</a>, thanks to <a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a>.</p>
 <p>You can use OpenAI's GPT to generate code samples, ask it Imaging Informatics questions, etc. Please share on Slack what you're using GPT for and how useful you found it to be.</p>
-<h3 id="gpt-35-vs-4">GPT 3.5 vs 4</h3>
+<h4 id="gpt-35-vs-4">GPT 3.5 vs 4</h4>
 <p>Below is a quick comparison to help you plan accordingly:</p>
 <table>
 <thead>
@@ -164,7 +174,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="how-to-use-the-chat-gpt-proxy">How to use the Chat GPT Proxy</h2>
+<h3 id="how-to-use-the-chat-gpt-proxy">How to use the Chat GPT Proxy</h3>
 <p>Make an HTTP POST to <code>https://siim.md.ai/api/openai/chat/completions</code>
 With the following HTTP headers:</p>
 <ul>
@@ -180,14 +190,14 @@ With the following HTTP headers:</p>
 <p>You may substitute <code>gpt-4</code> with <code>gpt-3.5-turbo</code> to address different GPT versions. <strong>Note:</strong> See the notebook examples below for additional optional parameters you can specify to tweak model performance and output.</p>
 <p>Your results will be served back in JSON format.</p>
 <p>See the Sample Notebooks section below for working code examples.</p>
-<h2 id="getting-an-api-key">Getting an API Key</h2>
-<p>Go to <a href="https://siim.md.ai/">siim.md.ai</a> and sign up for a free account. Once logged in, click your Initials/Avatar in the top right corner and select <code>User Settings</code>. In the next screen, select <code>Access Tokens</code> and proceed to <code>Generate New Token</code>. Once you have a token, you can use it in your code as your MD.ai API key.</p>
-<h2 id="sample-notebooks">Sample Notebooks</h2>
+<h3 id="getting-an-api-key">Getting an API Key</h3>
+<p>Go to <a href="https://siim.md.ai/chat">siim.md.ai/chat</a> and sign up for a free account. Once logged in, click the settings (gear) icon in the top right corner and select <code>Access Tokens</code>. There, click <code>+ Generate</code> to generate a new token, give it a name (e.g. <code>my token</code>) then click <code>Confirm</code>. Once that's done, copy the token displayed and save it somewhere handy. Afterward, you can use it in your code and/or API calls as your MD.ai API key.</p>
+<h3 id="sample-notebooks">Sample Notebooks</h3>
 <ul>
 <li>A more detailed version of this guide, <a href="https://colab.research.google.com/gist/georgezero/2e52ca00dcfade8ec4dad553657074a7/using-gpt-for-medical-imaging-and-data-analysis-in-the-siim-hackathon-rev-20230606.ipynb">Using GPT for Medical Imaging and Data Analysis in the SIIM Hackathon</a>, thanks to <a href="https://www.linkedin.com/in/howard-po-hao-chen-a04b082a/">Dr. Howard Chen</a></li>
 <li>Example asking GPT to generate a Jupyter Notebook doing FHIR and DICOMweb API Calls. One <a href="https://colab.research.google.com/gist/georgezero/98069d9133b2d45b90d03dd53bc488dc/mdai-gpt-4-api-siim-hackathon-2023-example-rev-20230606.ipynb">Using GPT 4</a> and another <a href="https://colab.research.google.com/gist/georgezero/f9d87413469663b37a5801968d027596/mdai-gpt4-and-gpt35-api-siim-hackathon-2023-example-ipynb-rev-20230606.ipynb">Using GPT 3.5 side-by-side with GPT 4</a>, thanks to <a href="https://www.linkedin.com/in/georgenyc/">Dr. George Shih</a>.</li>
 </ul>
-<h2 id="keep-in-mind">Keep in mind...</h2>
+<h3 id="keep-in-mind">Keep in mind...</h3>
 <p>Please note that OpenAI's GPT generated code only serves a starting point and may not work as-is against the Hackathon server for a variety of reasons. Some basic troubleshooting and minor tweaks might be necessary. Don't be afraid to ask for help if you get stuck!</p>
 <h2 id="aknowledgements">Aknowledgements</h2>
 <p>This guide, and API access would not be possible with the help of some awesome people!!</p>
