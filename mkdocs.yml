@@ -21,7 +21,7 @@ nav:
         - DICOMweb Intro: apis/dicom-web-intro.md
         - DICOMweb STOW: apis/dicom-web-stow.md
         - DICOM to JPG/PNG: apis/dicom-to-jpg-png.md
-        - ChatGPT: apis/chat-gpt.md
+        - Generative AI: apis/generative-ai.md
         - Ethereum Intro: apis/ethereum-blockchain-intro.md
         - Other APIs/Standards: apis/other-apis-and-standards.md
     - Miscellaneous:
