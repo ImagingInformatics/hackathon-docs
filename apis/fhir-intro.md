@@ -43,7 +43,7 @@ Who wouldn't? Right?!? Have a look at [https://replit.com/@mohannadhussain/fhir-
 
 * [Python HL7 Package - GitHub](https://github.com/crs4/hl7apy)
 
-## YouTube Video Channels for FHIR:
+## YouTube Video Channels for FHIR
 
 * [Gino Canessa FHIR Tutorials](https://www.youtube.com/@GinoCanessa)
 * [Sidharth Ramesh - MedBlocks FHIR Tutorials](https://www.youtube.com/@medblocks)
