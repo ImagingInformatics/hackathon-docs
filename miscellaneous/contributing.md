@@ -6,6 +6,23 @@ Do you see a spelling error? Or maybe you have some cool information to add? We'
 
 Everything you see in these docs is authored using [Markdown](https://en.wikipedia.org/wiki/Markdown) in Github. Simply fork this project [https://github.com/ImagingInformatics/hackathon-docs](https://github.com/ImagingInformatics/hackathon-docs), make your changes then submit a pull request.
 
+To work on the documentation you do need to have Python installed and you will need to install some Python packages:
+
+```
+pip3 install mkdocs
+pip3 install mkdocs-same-dir
+```
+
+After that, simply execute the following.
+
+```
+mkdocs serve
+```
+
+and visit:  [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+There is more documentation about MkDocs here:  [MkDocs User Guide](https://www.mkdocs.org/user-guide/)
+
 ## SIIM Hackathon Dataset
 We are always in search of volunteers to help enrich our dataset. Below are some ideas for things people can contribute, but we are definitely open to other ideas as well.
 
