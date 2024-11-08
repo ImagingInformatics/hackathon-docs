@@ -26,8 +26,11 @@ nav:
         - Other APIs/Standards: apis/other-apis-and-standards.md
     - Image Archives:
         - Orthanc: imaging/orthanc.md
-        - DCM4CHEE: imaging/dcm4chee.md
+        - DCM4CHE: imaging/dcm4che.md
     - Miscellaneous:
+        - DICOM Resources: miscellaneous/dicom-resources.md
+        - IDE's: miscellaneous/ides.md
+        - Docker: miscellaneous/docker.md
         - Data Sets: miscellaneous/data-sets.md
         - Contributing: miscellaneous/contributing.md
 plugins:
