@@ -48,6 +48,14 @@ Who wouldn't? Right?!? Have a look at [https://replit.com/@mohannadhussain/fhir-
 * [Gino Canessa FHIR Tutorials](https://www.youtube.com/@GinoCanessa)
 * [Sidharth Ramesh - MedBlocks FHIR Tutorials](https://www.youtube.com/@medblocks)
 
+## FHIR Forums / User Groups
+
+* [FHIR Chat - You can also use Zulip](https://chat.fhir.org/)
+* [Zulip, client and server - Organized chat for distributed teams](https://zulip.com/)
+
+
+
+
 
 
 
