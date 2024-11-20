@@ -65,6 +65,7 @@ Interested in pushing data to the server? [This article](./dicom-web-stow.md) pr
 
 ## Resources
 * [DICOMweb documentation](http://www.dicomweb.org/)
+* [DICOMweb CheatSheet](https://www.dicomstandard.org/docs/librariesprovider2/dicomdocuments/dicom/wp-content/uploads/2018/04/dicomweb-cheatsheet.pdf)
 * [QIDO-RS](ftp://medical.nema.org/medical/dicom/final/sup166_ft5.pdf)
 * [WADO-RS](ftp://medical.nema.org/medical/dicom/final/sup161_ft.pdf)
 * [STOW-RS](ftp://medical.nema.org/medical/dicom/Final/sup163_ft3.pdf)

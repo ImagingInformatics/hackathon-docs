@@ -33,5 +33,31 @@ Who wouldn't? Right?!? Have a look at [https://replit.com/@mohannadhussain/fhir-
 
 ## Resources
 * [FHIR Home Page](https://www.hl7.org/fhir/index.html)
+* [FHIR HAPI JPAServer Starter GitHub](https://github.com/hapifhir/hapi-fhir-jpaserver-starter)
 * [Searching using FHIR](https://www.hl7.org/fhir/search.html)
 * [Patient Resource](https://www.hl7.org/fhir/patient.html)
+
+
+* [Python Package for FHIR resources](https://pypi.org/project/fhir.resources/)
+* [Python Package - a FHIR Client](https://github.com/smart-on-fhir/client-py)
+
+* [Python HL7 Package - GitHub](https://github.com/crs4/hl7apy)
+
+## YouTube Video Channels for FHIR
+
+* [Gino Canessa FHIR Tutorials](https://www.youtube.com/@GinoCanessa)
+* [Sidharth Ramesh - MedBlocks FHIR Tutorials](https://www.youtube.com/@medblocks)
+
+## FHIR Forums / User Groups
+
+* [FHIR Chat - You can also use Zulip](https://chat.fhir.org/)
+* [Zulip, client and server - Organized chat for distributed teams](https://zulip.com/)
+
+
+
+
+
+
+
+
+
