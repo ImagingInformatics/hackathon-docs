@@ -76,11 +76,24 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../apis/other-apis-and-standards/">Other APIs/Standards</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Image Archives</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../imaging/orthanc/">Orthanc</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../imaging/dcm4che/">DCM4CHE</a>
+                  </li>
+              </ul>
               <p class="caption"><span class="caption-text">Miscellaneous</span></p>
               <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../dicom-resources/">DICOM Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ides/">IDE's</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../docker/">Docker</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../data-sets/">Data Sets</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Contributing</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Contributing</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#this-documentation">This Documentation</a>
     </li>
@@ -133,6 +146,15 @@
 <h2 id="this-documentation">This Documentation</h2>
 <p>Do you see a spelling error? Or maybe you have some cool information to add? We'd love to incorporate your changes.</p>
 <p>Everything you see in these docs is authored using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> in Github. Simply fork this project <a href="https://github.com/ImagingInformatics/hackathon-docs">https://github.com/ImagingInformatics/hackathon-docs</a>, make your changes then submit a pull request.</p>
+<p>To work on the documentation you do need to have Python installed and you will need to install some Python packages:</p>
+<pre><code>pip3 install mkdocs
+pip3 install mkdocs-same-dir
+</code></pre>
+<p>After that, simply execute the following.</p>
+<pre><code>mkdocs serve
+</code></pre>
+<p>and visit:  <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+<p>There is more documentation about MkDocs here:  <a href="https://www.mkdocs.org/user-guide/">MkDocs User Guide</a></p>
 <h2 id="siim-hackathon-dataset">SIIM Hackathon Dataset</h2>
 <p>We are always in search of volunteers to help enrich our dataset. Below are some ideas for things people can contribute, but we are definitely open to other ideas as well.</p>
 <ul>

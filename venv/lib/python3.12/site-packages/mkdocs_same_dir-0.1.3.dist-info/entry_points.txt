@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+same-dir = mkdocs_same_dir.plugin:SameDirPlugin
