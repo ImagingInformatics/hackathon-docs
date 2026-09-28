@@ -1,0 +1,47 @@
+name: Deploy docs
+
+# Publishes the site to GitHub Pages (the gh-pages branch) whenever main changes.
+# Until September 2026 this was a manual `mkdocs gh-deploy`, so merged fixes
+# stayed invisible on the live site until someone remembered to run it.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never run two deploys at once; a later one waits rather than cancelling.
+concurrency:
+  group: deploy-docs
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # Pinned to the versions the site has always been built with.
+      - name: Install MkDocs
+        run: pip install "mkdocs==1.6.1" "mkdocs-same-dir==0.1.5"
+
+      - name: Configure git identity for the deploy commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # Fetch the current gh-pages tip so the deploy lands on top of it as a
+      # normal push, keeping the deploy history, rather than force-pushing.
+      - name: Fetch gh-pages
+        run: git fetch --depth=1 origin gh-pages:gh-pages
+
+      # --strict makes warnings such as broken internal links fail the build,
+      # which stops the deploy before anything is published.
+      - name: Build and deploy
+        run: mkdocs gh-deploy --strict
