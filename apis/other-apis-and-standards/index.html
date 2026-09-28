@@ -87,7 +87,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#synthea-synthetic-patient-generation">Synthea Synthetic Patient Generation</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#vonk-loader">Vonk Loader</a>
+    <li class="toctree-l3"><a class="reference internal" href="#loading-synthea-data-into-a-fhir-server">Loading Synthea data into a FHIR server</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#fhir-resource-editor-fred">FHIR Resource Editor (FRED)</a>
     </li>
@@ -181,8 +181,27 @@
 <p>There are two versions: <a href="https://github.com/OHIF/static-wado-java">Java</a> and <a href="https://github.com/OHIF/static-wado-js">Javascript</a></p>
 <h3 id="synthea-synthetic-patient-generation"><a href="https://synthetichealth.github.io/synthea/">Synthea Synthetic Patient Generation</a></h3>
 <p>Synthea is an open-source, synthetic patient generator that models the medical history of synthetic patients. Our mission is to provide high-quality, synthetic, realistic but not real, patient data and associated health records covering every aspect of healthcare. The resulting data is free from cost, privacy, and security restrictions, enabling research with Health IT data that is otherwise legally or practically unavailable.</p>
-<h3 id="vonk-loader"><a href="https://simplifier.net/downloads/vonkloader">Vonk Loader</a></h3>
-<p>Vonk Loader is a command line tool to bulk load resources into a FHIR server. Vonk Loader works on Windows, Linux and macOS.</p>
+<h3 id="loading-synthea-data-into-a-fhir-server"><a href="https://nih-odss.github.io/fhir-for-research/modules/synthea-test-server">Loading Synthea data into a FHIR server</a></h3>
+<p>Synthea exports each patient as a FHIR transaction Bundle, which a FHIR server accepts with a single POST to its base URL, so no separate loading tool is needed. The NIH <em>FHIR for Research</em> guide linked above walks through the whole process, including running a local server with the same HAPI FHIR image the hackathon server uses.</p>
+<p>In short: start a local server, then load the hospital and practitioner files <strong>before</strong> the patient files, because the patient bundles refer to the organizations and practitioners in them.</p>
+<pre><code class="language-bash">docker run -d -p 8080:8080 hapiproject/hapi:latest    # server at http://localhost:8080/fhir
+
+# HAPI takes a minute or so to start; wait until it answers
+until curl -sf http://localhost:8080/fhir/metadata &gt; /dev/null; do sleep 5; done
+
+cd output/fhir
+load() {
+  curl -s -o /dev/null -w &quot;%{http_code}  $1\n&quot; \
+       -H &quot;Content-Type: application/fhir+json&quot; \
+       --data-binary &quot;@$1&quot; http://localhost:8080/fhir
+}
+for f in hospitalInformation*.json practitionerInformation*.json; do load &quot;$f&quot;; done
+for f in *.json; do
+  case &quot;$f&quot; in hospitalInformation*|practitionerInformation*) ;; *) load &quot;$f&quot; ;; esac
+done
+</code></pre>
+<p>Each line of output should start with <code>200</code>. Load one file at a time as above: very large bundles (over roughly 2 MB) can time out.</p>
+<p><em>This entry previously listed Vonk Loader, which Firely has discontinued.</em></p>
 <h3 id="fhir-resource-editor-fred"><a href="http://docs.smarthealthit.org/fred/">FHIR Resource Editor (FRED)</a></h3>
 <p>Allows construction of FHIR object using a convenient user interface.</p>
 <h3 id="loinc-fhir-terminology-server"><a href="https://loinc.org/fhir/">LOINC FHIR Terminology Server</a></h3>

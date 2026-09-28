@@ -192,7 +192,39 @@
 <p><code>https://hackathon.siim.org/wadouri/?requestType=WADO&amp;studyUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.103189108764313019491934667255&amp;seriesUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.104616474240757574154876423123&amp;objectUID=1.3.6.1.4.1.14519.5.2.1.4792.2001.267212981954448819074140522716</code></p>
 <p>The URL above returns DICOM. If you want a rendered JPEG or PND, simply add <code>&amp;contentType=image/jpeg</code> or <code>&amp;contentType=image/png</code> to your <strong>URL</strong> (not header) request.</p>
 <h2 id="would-you-like-to-see-some-sample-code">Would you like to see some sample code?</h2>
-<p>Who wouldn't? Right?!? Have a look at <a href="https://replit.com/@mohannadhussain/dicom-web-example">https://replit.com/@mohannadhussain/dicom-web-example</a>)</p>
+<p>Who wouldn't? Right?!?</p>
+<p>With cURL:</p>
+<pre><code class="language-bash">curl -H &quot;apikey: YOUR_API_KEY&quot; \
+     -H &quot;Accept: application/dicom+json&quot; \
+     &quot;https://hackathon.siim.org/dicomweb/studies/?00100010=SIIM*&quot;
+</code></pre>
+<p>With Python, using <a href="https://pypi.org/project/requests/">requests</a>:</p>
+<pre><code class="language-python">import requests
+
+BASE = &quot;https://hackathon.siim.org/dicomweb&quot;
+HEADERS = {&quot;apikey&quot;: &quot;YOUR_API_KEY&quot;, &quot;Accept&quot;: &quot;application/dicom+json&quot;}
+
+# 1. Find studies for the SIIM demo patients (QIDO-RS)
+studies = requests.get(
+    f&quot;{BASE}/studies/&quot;, params={&quot;00100010&quot;: &quot;SIIM*&quot;}, headers=HEADERS, timeout=30
+).json()
+
+for study in studies:
+    study_uid = study[&quot;0020000D&quot;][&quot;Value&quot;][0]          # StudyInstanceUID
+    name = study.get(&quot;00100010&quot;, {}).get(&quot;Value&quot;, [{}])[0].get(&quot;Alphabetic&quot;, &quot;&quot;)
+    print(study_uid, name)
+
+# 2. Download the DICOM instances of the first study (WADO-RS)
+if studies:
+    first_uid = studies[0][&quot;0020000D&quot;][&quot;Value&quot;][0]
+    response = requests.get(
+        f&quot;{BASE}/studies/{first_uid}&quot;,
+        headers={&quot;apikey&quot;: &quot;YOUR_API_KEY&quot;, &quot;Accept&quot;: &quot;multipart/related; type=application/dicom&quot;},
+        timeout=120,
+    )
+    print(response.status_code, len(response.content), &quot;bytes&quot;)
+</code></pre>
+<p>If you get a <code>403</code>, check that the <code>apikey</code> header is present and correct.</p>
 <h2 id="beyond-simple-viewing">Beyond simple viewing</h2>
 <p>Interested in pushing data to the server? <a href="../dicom-web-stow/">This article</a> provides tips on how to do that using cURL, which can easily be adapted for use with other tools, like Postman.</p>
 <h2 id="resources">Resources</h2>
