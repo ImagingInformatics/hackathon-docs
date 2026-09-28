@@ -13,7 +13,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Contributing";
-        var mkdocs_page_input_path = "miscellaneous\\contributing.md";
+        var mkdocs_page_input_path = "miscellaneous/contributing.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -100,6 +100,10 @@
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Contributing</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#this-documentation">This Documentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#publishing">Publishing</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#siim-hackathon-dataset">SIIM Hackathon Dataset</a>
         <ul>
@@ -159,6 +163,9 @@ pip3 install mkdocs-same-dir
 </code></pre>
 <p>and visit:  <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
 <p>There is more documentation about MkDocs here:  <a href="https://www.mkdocs.org/user-guide/">MkDocs User Guide</a></p>
+<h3 id="publishing">Publishing</h3>
+<p>Changes merged into <code>main</code> are published to the live site automatically by the <strong>Deploy docs</strong> GitHub Action, usually within a couple of minutes. You don't need to run <code>mkdocs gh-deploy</code> yourself. If a deploy ever needs re-running, open the action on the repository's Actions tab and use <strong>Run workflow</strong>.</p>
+<p>Before opening a pull request, you can run <code>mkdocs build --strict</code> locally. The deploy runs the same check, and a failure there stops the site from publishing.</p>
 <h2 id="siim-hackathon-dataset">SIIM Hackathon Dataset</h2>
 <p>We are always in search of volunteers to help enrich our dataset. Below are some ideas for things people can contribute, but we are definitely open to other ideas as well.</p>
 <ul>
