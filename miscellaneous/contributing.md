@@ -23,6 +23,11 @@ and visit:  [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 There is more documentation about MkDocs here:  [MkDocs User Guide](https://www.mkdocs.org/user-guide/)
 
+### Publishing
+Changes merged into `main` are published to the live site automatically by the **Deploy docs** GitHub Action, usually within a couple of minutes. You don't need to run `mkdocs gh-deploy` yourself. If a deploy ever needs re-running, open the action on the repository's Actions tab and use **Run workflow**.
+
+Before opening a pull request, you can run `mkdocs build --strict` locally. The deploy runs the same check, and a failure there stops the site from publishing.
+
 ## SIIM Hackathon Dataset
 We are always in search of volunteers to help enrich our dataset. Below are some ideas for things people can contribute, but we are definitely open to other ideas as well.
 
