@@ -57,8 +57,47 @@ If you are working with a server that does not support DICOMweb, you can retriev
  
 The URL above returns DICOM. If you want a rendered JPEG or PND, simply add `&contentType=image/jpeg` or `&contentType=image/png` to your **URL** (not header) request.
 
-## Would you like to see some sample code? 
-Who wouldn't? Right?!? Have a look at [https://replit.com/@mohannadhussain/dicom-web-example](https://replit.com/@mohannadhussain/dicom-web-example))
+## Would you like to see some sample code?
+Who wouldn't? Right?!?
+
+With cURL:
+
+```bash
+curl -H "apikey: YOUR_API_KEY" \
+     -H "Accept: application/dicom+json" \
+     "https://hackathon.siim.org/dicomweb/studies/?00100010=SIIM*"
+```
+
+With Python, using [requests](https://pypi.org/project/requests/):
+
+```python
+import requests
+
+BASE = "https://hackathon.siim.org/dicomweb"
+HEADERS = {"apikey": "YOUR_API_KEY", "Accept": "application/dicom+json"}
+
+# 1. Find studies for the SIIM demo patients (QIDO-RS)
+studies = requests.get(
+    f"{BASE}/studies/", params={"00100010": "SIIM*"}, headers=HEADERS, timeout=30
+).json()
+
+for study in studies:
+    study_uid = study["0020000D"]["Value"][0]          # StudyInstanceUID
+    name = study.get("00100010", {}).get("Value", [{}])[0].get("Alphabetic", "")
+    print(study_uid, name)
+
+# 2. Download the DICOM instances of the first study (WADO-RS)
+if studies:
+    first_uid = studies[0]["0020000D"]["Value"][0]
+    response = requests.get(
+        f"{BASE}/studies/{first_uid}",
+        headers={"apikey": "YOUR_API_KEY", "Accept": "multipart/related; type=application/dicom"},
+        timeout=120,
+    )
+    print(response.status_code, len(response.content), "bytes")
+```
+
+If you get a `403`, check that the `apikey` header is present and correct.
 
 ## Beyond simple viewing
 Interested in pushing data to the server? [This article](./dicom-web-stow.md) provides tips on how to do that using cURL, which can easily be adapted for use with other tools, like Postman.

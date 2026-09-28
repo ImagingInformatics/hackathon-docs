@@ -27,8 +27,44 @@ Once you've picked a patient to download, extract the patient ID by using the ID
 ## 3. Switch return format between XML and JSON
 If you want to control the format of the server response, add an `Accept` header with `application/json` for JSON or `text/xml` for XML.
 
-## Would you like to see some sample code? 
-Who wouldn't? Right?!? Have a look at [https://replit.com/@mohannadhussain/fhir-example](https://replit.com/@mohannadhussain/fhir-example)
+## Would you like to see some sample code?
+Who wouldn't? Right?!?
+
+With cURL:
+
+```bash
+curl -H "apikey: YOUR_API_KEY" \
+     -H "Accept: application/fhir+json" \
+     "https://hackathon.siim.org/fhir/Patient?name=SIIM"
+```
+
+With Python, using [requests](https://pypi.org/project/requests/):
+
+```python
+import requests
+
+BASE = "https://hackathon.siim.org/fhir"
+HEADERS = {"apikey": "YOUR_API_KEY", "Accept": "application/fhir+json"}
+
+# 1. Find the SIIM demo patients
+bundle = requests.get(
+    f"{BASE}/Patient", params={"name": "SIIM"}, headers=HEADERS, timeout=30
+).json()
+
+for entry in bundle.get("entry", []):
+    patient = entry["resource"]
+    name = patient.get("name", [{}])[0]
+    print(patient["id"], name.get("given"), name.get("family"))
+
+# 2. Find the imaging studies for one of them
+studies = requests.get(
+    f"{BASE}/ImagingStudy", params={"patient": "siimandy"}, headers=HEADERS, timeout=30
+).json()
+
+print(f"{studies.get('total', 0)} imaging studies")
+```
+
+If you get a `403`, check that the `apikey` header is present and correct.
 
 
 ## Resources
