@@ -30,8 +30,32 @@ There are two versions: [Java](https://github.com/OHIF/static-wado-java) and [Ja
 ### [Synthea Synthetic Patient Generation](https://synthetichealth.github.io/synthea/)
 Synthea is an open-source, synthetic patient generator that models the medical history of synthetic patients. Our mission is to provide high-quality, synthetic, realistic but not real, patient data and associated health records covering every aspect of healthcare. The resulting data is free from cost, privacy, and security restrictions, enabling research with Health IT data that is otherwise legally or practically unavailable.
 
-### [Vonk Loader](https://simplifier.net/downloads/vonkloader) 
-Vonk Loader is a command line tool to bulk load resources into a FHIR server. Vonk Loader works on Windows, Linux and macOS.
+### [Loading Synthea data into a FHIR server](https://nih-odss.github.io/fhir-for-research/modules/synthea-test-server)
+Synthea exports each patient as a FHIR transaction Bundle, which a FHIR server accepts with a single POST to its base URL, so no separate loading tool is needed. The NIH *FHIR for Research* guide linked above walks through the whole process, including running a local server with the same HAPI FHIR image the hackathon server uses.
+
+In short: start a local server, then load the hospital and practitioner files **before** the patient files, because the patient bundles refer to the organizations and practitioners in them.
+
+```bash
+docker run -d -p 8080:8080 hapiproject/hapi:latest    # server at http://localhost:8080/fhir
+
+# HAPI takes a minute or so to start; wait until it answers
+until curl -sf http://localhost:8080/fhir/metadata > /dev/null; do sleep 5; done
+
+cd output/fhir
+load() {
+  curl -s -o /dev/null -w "%{http_code}  $1\n" \
+       -H "Content-Type: application/fhir+json" \
+       --data-binary "@$1" http://localhost:8080/fhir
+}
+for f in hospitalInformation*.json practitionerInformation*.json; do load "$f"; done
+for f in *.json; do
+  case "$f" in hospitalInformation*|practitionerInformation*) ;; *) load "$f" ;; esac
+done
+```
+
+Each line of output should start with `200`. Load one file at a time as above: very large bundles (over roughly 2 MB) can time out.
+
+*This entry previously listed Vonk Loader, which Firely has discontinued.*
 
 ### [FHIR Resource Editor (FRED)](http://docs.smarthealthit.org/fred/)
 Allows construction of FHIR object using a convenient user interface.
