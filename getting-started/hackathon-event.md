@@ -20,7 +20,7 @@ You can also take time to familiarize yourself with the [Hackathon Server](./hac
 ## Questions? Problems?
 Seek help by posting a message on Slack in `#general`. During the hackathon event, We have code heroes to help with technical matters in `#code-heroes`, and domain experts to help with clinical workflows and domain knowledge in `#domain-experts`.
 
-If you need help outside the hackathon event or for any other urgent matters please contact Thomas OSullivan or via `@TomO` if you are on the Hackathon Slack space.
+If you need help outside the hackathon event or for any other urgent matters, please contact Thomas O'Sullivan at [Thomas.Liam.OSullivan@gmail.com](mailto:Thomas.Liam.OSullivan@gmail.com), or `@TomO` on the Hackathon Slack space. For a broken link or a mistake in these docs, you can also [open an issue on GitHub](https://github.com/ImagingInformatics/hackathon-docs/issues).
 
 ## Some things to keep in mind!
 * SIIM's hackathon dataset provides **ten** cohesive patient stories that connect the FHIR and DICOMweb resources like a real-life patient would have. Search for patients with last name `SIIM`.
