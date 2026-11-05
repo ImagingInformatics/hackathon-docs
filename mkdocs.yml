@@ -10,6 +10,7 @@ nav:
     - Getting Started: 
         - Hackathon Event: getting-started/hackathon-event.md
         - Hackathon Server: getting-started/hackathon-server.md
+        - AI Coding Agents (RSNA 2026): getting-started/ai-agents.md
         - ModHeader: getting-started/mod-header.md
         - Slack: getting-started/slack.md
     - What's new:
