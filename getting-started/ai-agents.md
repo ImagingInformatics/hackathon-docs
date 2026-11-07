@@ -12,7 +12,7 @@ project, and your agent knows how to use the server.
 Read the [SIIM Hackathon API Platform Participant Agreement](https://siim.org/learning-events/events/hackathon/siim-hackathon-api-platform-participant-agreement/),
 then request a key with the [SIIM API key request form](https://docs.google.com/forms/d/e/1FAIpQLSd9tFFjouv2ROqlZ-h9GFtKEb0c9JOGRdNcoMLbCZ8kx9lkig/viewform).
 You sign the agreement in the form by typing your full name. You will receive a personal key by
-email within one business day. Event keys:
+email. Event keys:
 
 * start with `siimrsna_`
 * belong to one person; each teammate who runs an agent should request their own
