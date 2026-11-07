@@ -65,7 +65,8 @@ curl -o AGENTS.md \
 
 ## 4. Limits
 
-The server is shared by every team at the event, so each key is rate limited.
+The server is shared by every team at the event, so each key is rate limited. These limits take
+effect before the event starts (Nov 29, 2026).
 
 | Limit | Value |
 | --- | --- |

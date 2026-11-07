@@ -67,6 +67,9 @@ on this server, and you must not upload any.
 | FHIR request body | 10 MB | `413` |
 | DICOMweb request body (STOW) | 100 MB per request | `413`; split large studies into several requests |
 
+These limits take effect before the event starts (Nov 29, 2026). Write code that
+respects them from the start.
+
 ### Status codes and what to do
 
 | Code | Meaning | Correct response |
