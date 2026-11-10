@@ -47,7 +47,9 @@ Download one of these files into your project. Both hold the same content: endpo
 | Agent | File | Where it goes in your project |
 | --- | --- | --- |
 | Claude Code | [SKILL.md](https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/SKILL.md) | `.claude/skills/siim-hackathon-api/SKILL.md` |
-| OpenAI Codex, GitHub Copilot, and agents that read `AGENTS.md` | [AGENTS.md](https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/AGENTS.md) | `AGENTS.md` in the project root (append to it if you already have one) |
+| GitHub Copilot (VS Code, JetBrains, github.com) | [AGENTS.md](https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/AGENTS.md) | `.github/copilot-instructions.md` (append to it if you already have one) |
+| OpenAI Codex and other agents that read `AGENTS.md` | [AGENTS.md](https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/AGENTS.md) | `AGENTS.md` in the project root (append to it if you already have one) |
+| Kiro | [AGENTS.md](https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/AGENTS.md) | `.kiro/steering/siim-api.md` |
 | Any other agent | Either file | Paste it into the agent's project instructions or first prompt |
 
 From a terminal in your project root:
@@ -58,10 +60,23 @@ mkdir -p .claude/skills/siim-hackathon-api
 curl -o .claude/skills/siim-hackathon-api/SKILL.md \
   https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/SKILL.md
 
-# Codex, Copilot and others
+# GitHub Copilot
+mkdir -p .github
+curl -o .github/copilot-instructions.md \
+  https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/AGENTS.md
+
+# Codex and others
 curl -o AGENTS.md \
   https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/AGENTS.md
+
+# Kiro
+mkdir -p .kiro/steering
+curl -o .kiro/steering/siim-api.md \
+  https://raw.githubusercontent.com/ImagingInformatics/hackathon-docs/main/agents/AGENTS.md
 ```
+
+If a file with that name already exists in your project, download to a temporary name and
+paste its contents at the end of your existing file instead of overwriting it.
 
 ## 4. Limits
 
@@ -82,6 +97,8 @@ seconds in the `Retry-After` header and try again. The instruction files tell it
 * The server resets every day at 3:00 AM US Eastern and is down for up to 10 minutes. Anything you
   uploaded is deleted, so keep your source data in your project and re-upload it after a reset.
 * All data on the server is synthetic or de-identified. Never upload real patient data.
+* Please don't run security scans or load tests against the server, including with the event's
+  scanning tools. They slow it down for every team. Scan your own code instead.
 * Endpoint details and example queries: [Hackathon Server](./hackathon-server.md),
   [FHIR guide](../apis/fhir-intro.md), [DICOMweb guide](../apis/dicom-web-intro.md).
 

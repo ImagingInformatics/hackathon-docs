@@ -94,6 +94,9 @@ respects them from the start.
 5. Stop and report to the user after repeated `403`, `413` or `5xx` responses
    instead of trying variations.
 6. Only use the endpoints in the table above.
+7. Never run security scanners, vulnerability scans, fuzzers or load tests
+   against the server. They slow it down for every team. Scan your own code
+   and dependencies instead.
 
 ### Daily reset
 
