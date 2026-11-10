@@ -289,6 +289,9 @@ respects them from the start.</p>
 <li>Stop and report to the user after repeated <code>403</code>, <code>413</code> or <code>5xx</code> responses
    instead of trying variations.</li>
 <li>Only use the endpoints in the table above.</li>
+<li>Never run security scanners, vulnerability scans, fuzzers or load tests
+   against the server. They slow it down for every team. Scan your own code
+   and dependencies instead.</li>
 </ol>
 <h3 id="daily-reset">Daily reset</h3>
 <p>The server resets every day at <strong>3:00 AM US Eastern</strong> and is unavailable for up
