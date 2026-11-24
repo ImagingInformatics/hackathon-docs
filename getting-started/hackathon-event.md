@@ -24,5 +24,6 @@ If you need help outside the hackathon event or for any other urgent matters, pl
 
 ## Some things to keep in mind!
 * SIIM's hackathon dataset provides **ten** cohesive patient stories that connect the FHIR and DICOMweb resources like a real-life patient would have. Search for patients with last name `SIIM`.
+* The R4 server (`https://hackathon.siim.org/fhir-r4/`) also has 40 synthetic patients made with [Synthea](https://synthetichealth.github.io/synthea/), each with about 10 years of history (encounters, conditions, labs, medications, procedures). They have generated ids instead of `siim` ones and no images on the DICOMweb server. List them with `Patient?_count=50`. Some have thousands of resources, so `Patient/[id]/$everything` comes back in pages: follow the `next` links.
 *  Our FHIR server features versions R5 (latest) and R4 of the standard.
 * Our DICOMweb server may not support every feature described in the DICOMweb specifications. Check [here](https://hg.orthanc-server.com/orthanc-dicomweb/file/tip/Status.txt) for more details.
