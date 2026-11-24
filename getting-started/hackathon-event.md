@@ -12,8 +12,6 @@ Go to the [Hackathon page on siim.org](https://siim.org/learning-events/events/h
 
 Additionally, don't forget to join the conversation on [Slack](https://join.slack.com/t/siimhackathon/shared_invite/zt-mkk0yn2e-KUqOLi6ETBUQmOffxmcQxA). 
 
-For inspiration of ideas to implement, check this [list of hackathon project ideas](https://docs.google.com/spreadsheets/d/160Ph4t0BxKb1L-Mv_Bq7867yHEXonBxrslgUf-EixmY/edit?usp=sharing).
-
 You can also take time to familiarize yourself with the [Hackathon Server](./hackathon-server.md) and its APIs. As well as [resources of interest](../apis/other-apis-and-standards.md).
 
 
