@@ -1,7 +1,7 @@
 # How To Extract a JPG or PNG from a DICOM Image
 
 ## Introduction
-A DICOM Image is a container, which combines a header (metadata like patient ID, study date, etc) with pixel data (i.e. the image itself). The latter may be uncompressed (i.e. bitmap) or compressed with one of the many codecs suported by the DICOM standard, such as JPEG-LS or High-Throughput JPEG 2000 (HTJ2K). 
+A DICOM Image is a container, which combines a header (metadata like patient ID, study date, etc) with pixel data (i.e. the image itself). The latter may be uncompressed (i.e. bitmap) or compressed with one of the many codecs supported by the DICOM standard, such as JPEG-LS or High-Throughput JPEG 2000 (HTJ2K).
 
 To process pixels, it may be easier to extract the pixel data into a simple JPG or PNG file. Two methods are described here: 1) DICOMweb and 2) Command-line utilities. Code/scripting using a DICOM library would also work, but that's out of scope for this article.
 
@@ -24,7 +24,7 @@ If your server supports this endpoint, then the rest is easy! You can just set a
 and add an `Accept` header with either `image/jpeg` or `image/png` depending on what you want, and that should be all!
 
 #### DICOMweb Example
-Here's a working example from the [SIIM Hackathon Server](../getting-started/hackathon-server.md). It required a valid hackathon API key:
+Here's a working example from the [SIIM Hackathon Server](../getting-started/hackathon-server.md). It requires a valid hackathon API key:
 
 ```
 https://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.6279.6001.300027087262813745730072134723/series/1.3.6.1.4.1.14519.5.2.1.6279.6001.513114548408601984123939083099/instances/1.3.6.1.4.1.14519.5.2.1.6279.6001.197993217821785409800235232773/rendered
@@ -36,7 +36,7 @@ Accept: image/png
 You can try this via tools like [Postman](https://www.postman.com/), [Insomnia](https://insomnia.rest/), etc.
 
 ### 2. Extracting JPG/PNG Via Command-Line Interface (CLI) Utilities
-For this, we'll be using the excellent [dcm4che CLI toolkit](https://web.dcm4che.org/dcm4che-utilities). This toolkit works on Windows, Mac and Linux (even headless servers). You can download the latest and greatest verion of dcm4che [here](https://sourceforge.net/projects/dcm4che/files/dcm4che3/) (you'll want to download the file ending with `-bin.zip`).
+For this, we'll be using the excellent [dcm4che CLI toolkit](https://web.dcm4che.org/dcm4che-utilities). This toolkit works on Windows, Mac and Linux (even headless servers). You can download the latest and greatest version of dcm4che [here](https://sourceforge.net/projects/dcm4che/files/dcm4che3/) (you'll want to download the file ending with `-bin.zip`).
 
 Once downloaded, you can run `dcm2jpg` and point it to a DICOM file to export the pixel data like so:
 ```
@@ -54,5 +54,5 @@ Assuming you have both dcm4che and this [sample hackathon image](https://github.
 ```
 Or, the following to go with PNG instead:
 ```
-./dcm4che-5.23.2/bin/dcm2jpg -F PNG IM-0031-0001.dcm IM-0031-0001.jpg
+./dcm4che-5.23.2/bin/dcm2jpg -F PNG IM-0031-0001.dcm IM-0031-0001.png
 ```

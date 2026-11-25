@@ -8,21 +8,25 @@ All FHIR calls are based on retrieving resources. There are many different types
 2. (Optional) [Postman](https://www.postman.com/)
 
 ### Don't forget...
-When making requests against the end points below, ensure you include an HTTP header like so: 
+When making requests against the endpoints below, ensure you include an HTTP header like so:
 
 `apikey: [your API key]`
 
 If you don't have a SIIM Hackathon API key, see [Hackathon Server](../getting-started/hackathon-server.md).
 
 ## 1. A Hello World example
-A simple Hello World type query for FHIR, would look as follows, to query for all patients with the last name of **SIIM**: 
+A simple Hello World type query for FHIR looks like this. It finds the demo patients with the last name **SIIM**:
 
-``http://hackathon.siim.org/fhir/Patient?name=SIIM``
+`https://hackathon.siim.org/fhir/Patient?family=SIIM`
+
+That returns nine of the ten SIIM demo patients. The tenth is Bibata Amadou, id `siimbibata`.
+
+Each FHIR server also has 40 synthetic patients made with [Synthea](https://synthetichealth.github.io/synthea/). To list the 50 baseline patients, use `https://hackathon.siim.org/fhir/Patient?_count=50`. Patients that teams upload during the day are added on top of these until the next daily reset.
 
 ## 2. Finding "Imaging Studies" of a given patient
 Once you've picked a patient to download, extract the patient ID by using the ID field from the response and you can download available studies by making a subsequent ImagingStudy query: 
 
-```http://hackathon.siim.org/fhir/ImagingStudy?patient=siimandy```
+`https://hackathon.siim.org/fhir/ImagingStudy?patient=siimandy`
 
 ## 3. Switch return format between XML and JSON
 If you want to control the format of the server response, add an `Accept` header with `application/json` for JSON or `text/xml` for XML.
@@ -35,7 +39,7 @@ With cURL:
 ```bash
 curl -H "apikey: YOUR_API_KEY" \
      -H "Accept: application/fhir+json" \
-     "https://hackathon.siim.org/fhir/Patient?name=SIIM"
+     "https://hackathon.siim.org/fhir/Patient?family=SIIM"
 ```
 
 With Python, using [requests](https://pypi.org/project/requests/):
@@ -46,9 +50,9 @@ import requests
 BASE = "https://hackathon.siim.org/fhir"
 HEADERS = {"apikey": "YOUR_API_KEY", "Accept": "application/fhir+json"}
 
-# 1. Find the SIIM demo patients
+# 1. Find the demo patients with the last name SIIM (nine of the ten)
 bundle = requests.get(
-    f"{BASE}/Patient", params={"name": "SIIM"}, headers=HEADERS, timeout=30
+    f"{BASE}/Patient", params={"family": "SIIM"}, headers=HEADERS, timeout=30
 ).json()
 
 for entry in bundle.get("entry", []):
@@ -88,12 +92,3 @@ If you get a `403`, check that the `apikey` header is present and correct.
 
 * [FHIR Chat - You can also use Zulip](https://chat.fhir.org/)
 * [Zulip, client and server - Organized chat for distributed teams](https://zulip.com/)
-
-
-
-
-
-
-
-
-

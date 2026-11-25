@@ -97,6 +97,9 @@ seconds in the `Retry-After` header and try again. The instruction files tell it
 * The server resets every day at 3:00 AM US Eastern and is down for up to 10 minutes. Anything you
   uploaded is deleted, so keep your source data in your project and re-upload it after a reset.
 * All data on the server is synthetic or de-identified. Never upload real patient data.
+* Each FHIR server (R5 and R4) has 50 patients: the 10 SIIM demo patients, which have matching
+  images on the DICOMweb server, and 40 synthetic [Synthea](https://synthetichealth.github.io/synthea/)
+  patients with about 10 years of records each but no images.
 * Please don't run security scans or load tests against the server, including with the event's
   scanning tools. They slow it down for every team. Scan your own code instead.
 * Endpoint details and example queries: [Hackathon Server](./hackathon-server.md),

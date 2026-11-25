@@ -4,13 +4,12 @@ We are glad that you are thinking about contributing. See below for options...
 ## This Documentation
 Do you see a spelling error? Or maybe you have some cool information to add? We'd love to incorporate your changes.
 
-Everything you see in these docs is authored using [Markdown](https://en.wikipedia.org/wiki/Markdown) in Github. Simply fork this project [https://github.com/ImagingInformatics/hackathon-docs](https://github.com/ImagingInformatics/hackathon-docs), make your changes then submit a pull request.
+Everything you see in these docs is authored using [Markdown](https://en.wikipedia.org/wiki/Markdown) on GitHub. Simply fork this project [https://github.com/ImagingInformatics/hackathon-docs](https://github.com/ImagingInformatics/hackathon-docs), make your changes then submit a pull request.
 
-To work on the documentation you do need to have Python installed and you will need to install some Python packages:
+To work on the documentation you do need to have Python installed and you will need to install some Python packages. These are the versions the live site is built with:
 
 ```
-pip3 install mkdocs
-pip3 install mkdocs-same-dir
+pip3 install "mkdocs==1.6.1" "mkdocs-same-dir==0.1.5"
 ```
 
 After that, simply execute the following.
@@ -28,10 +27,13 @@ Changes merged into `main` are published to the live site automatically by the *
 
 Before opening a pull request, you can run `mkdocs build --strict` locally. The deploy runs the same check, and a failure there stops the site from publishing.
 
+### AI agent instruction files
+`agents/AGENTS.md` and `agents/SKILL.md` are generated from `agents/siim-api.md`. Edit `agents/siim-api.md`, then run `python agents/build.py` to update the other two. `python agents/build.py --check` tells you if they are out of date.
+
 ## SIIM Hackathon Dataset
 We are always in search of volunteers to help enrich our dataset. Below are some ideas for things people can contribute, but we are definitely open to other ideas as well.
 
-* Incorporate non-Radiology samples (e.g. Dermatology or Pathology) into one of the patient vignette
+* Incorporate non-Radiology samples (e.g. Dermatology or Pathology) into one of the patient vignettes
 * Expand the number of featured FHIR resources, e.g. add some `Immunization` or `Medication` resources.
 * Enrich existing resources by adding more information, e.g. adding a preliminary report, or an addendum.
 * Update our resources for future-proofing against upcoming versions of FHIR
@@ -43,7 +45,7 @@ You can simply fork the project from GitHub here [https://github.com/ImagingInfo
 
 #### 1. Fork the two repositories for the [dataset](https://github.com/ImagingInformatics/hackathon-dataset.git) and the [images](https://github.com/ImagingInformatics/hackathon-images.git) and clone your forks locally.
 #### 2. Update the dicom fields of the images you want to add in the dataset
-* Use [pydicom](https://pydicom.github.io/) to update the dicom fields of the images you want to contribute. (ps: other dicom libraries can be used as well, like (dcm4che)[https://www.dcm4che.org/])
+* Use [pydicom](https://pydicom.github.io/) to update the dicom fields of the images you want to contribute. (ps: other dicom libraries can be used as well, like [dcm4che](https://www.dcm4che.org/))
 * The non-exhaustive list of fields to update from existing dicom files are:  
 
 | Field            | Value                                                                                                           |
@@ -64,15 +66,15 @@ Example with patient Sally:
 /Sally SIIM/
 ````
 #### 3. Create the FHIR resources of the patient you want to contribute
-* Start by creating a patient resource if it does not exist in the dataset repository. Use existing patient resource as template and
-update the resource id, text, name, gender, and birth date fields according the patient data.
+* Start by creating a patient resource if it does not exist in the dataset repository. Use an existing patient resource as a template and
+update the resource id, text, name, gender, and birth date fields according to the patient data.
 * Create an imaging study resource for the patient from the dicom files. Use [dicom2fhir](https://github.com/LinuxForHealth/dicom-fhir-converter.git) script
 as a starting point for the imaging resource.
-* Modify the imaging study resource to fit the SIIM Hackathon dataset format. Here are a not exhaustive list of fields to update manually:
+* Modify the imaging study resource to fit the SIIM Hackathon dataset format. Here is a non-exhaustive list of fields to update manually:
 
 | Field                         | Value                                             |
 |-------------------------------|---------------------------------------------------|
-| identifier.assigner.reference | Organisation/siim                                 |
+| identifier.assigner.reference | Organization/siim                                 |
 | subject.reference             | Patient/siim{patient_name} e.g. Patient/siimsally |
 | endpoint                      | Endpoint/siim-dicomweb                            |
 

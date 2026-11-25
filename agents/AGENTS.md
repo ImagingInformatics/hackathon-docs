@@ -48,12 +48,29 @@ on the host is part of the participant API.
 #### Known-good starting queries
 
 ```
-GET /fhir/Patient?name=SIIM                     # demo patients
+GET /fhir/Patient?family=SIIM                   # 9 of the 10 demo patients (see below)
+GET /fhir/Patient/siimbibata                    # the 10th demo patient
+GET /fhir/Patient?_count=50                     # the 50 baseline patients, plus any uploads
 GET /fhir/ImagingStudy?patient=siimandy         # studies for one demo patient
-GET /dicomweb/studies?00100010=SIIM*            # same patients, DICOM side
+GET /dicomweb/studies?00100010=SIIM*            # demo patient studies, DICOM side
 GET /dicomweb/studies/{StudyInstanceUID}/series
 GET /dicomweb/studies/{StudyInstanceUID}/series/{SeriesInstanceUID}/instances
 ```
+
+#### Patients on the server
+
+After each daily reset, each FHIR server (R5 and R4) has the same 50 baseline
+patients. Anything teams upload during the day comes on top of these.
+
+- 10 SIIM demo patients. Ids start with `siim` (for example `siimandy`). Each
+  has imaging studies on the DICOMweb server. Nine have the family name `SIIM`.
+  The tenth is Bibata Amadou, `Patient/siimbibata`. A search on `family=SIIM`
+  returns 9, not 10.
+- 40 synthetic patients made with Synthea. They have generated ids (not
+  `siim`), about 10 years of history each (encounters, conditions, labs,
+  medications, procedures), and no images on the DICOMweb server. Some have
+  thousands of resources, so `Patient/{id}/$everything` returns several pages.
+  Follow the `next` links one page at a time.
 
 The data is synthetic or de-identified demo data. There is no real patient data
 on this server, and you must not upload any.
@@ -149,7 +166,7 @@ def call(method, url, max_attempts=5, **kwargs):
 
 patients = call(
     "GET", f"{FHIR}/Patient",
-    params={"name": "SIIM", "_count": 20},
+    params={"family": "SIIM", "_count": 20},
     headers={"Accept": "application/fhir+json"},
 ).json()
 ```
