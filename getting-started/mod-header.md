@@ -5,12 +5,12 @@ All the APIs hosted on the Hackathon server require an API key to be sent via an
 You can obtain a plugin/extension to enable most modern browsers to do this. For example, [ModHeader for Chrome](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=en) can enable this for Chrome users.
 
 ## Configuration
-Said browser plugins allow you to send specific headers to specific sites. Using the example of ModHeader, you can configured it like so:
+Said browser plugins allow you to send specific headers to specific sites. Using the example of ModHeader, you can configure it like so:
 
 * **Request Headers** `apikey: [your-api-key]`
     Replace [your-api-key] with your private API key.
 
-* **Filters** To ensure your API is not to any other Internet website, add the following entries:
+* **Filters** To make sure your API key is not sent to any other website, add the following entries:
 `https://hackathon.siim.org/.*` and `http://hackathon.siim.org/.*`
 
 You now should be able to navigate to URLs like [https://hackathon.siim.org/](https://hackathon.siim.org/) or [https://hackathon.siim.org/vna](https://hackathon.siim.org/vna) and use them in your browser.

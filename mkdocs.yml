@@ -34,7 +34,7 @@ nav:
         - DCM4CHE: imaging/dcm4che.md
     - Miscellaneous:
         - DICOM Resources: miscellaneous/dicom-resources.md
-        - IDE's: miscellaneous/ides.md
+        - IDEs: miscellaneous/ides.md
         - Docker: miscellaneous/docker.md
         - Data Sets: miscellaneous/data-sets.md
         - Contributing: miscellaneous/contributing.md

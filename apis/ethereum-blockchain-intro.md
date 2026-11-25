@@ -1,7 +1,7 @@
 # 5-Minute Ethereum Starting Guide
 
 ## Basic Concepts
-* Ethereum is one implementation of Blockchain, others exist, too, like BitCoin.
+* Ethereum is one implementation of Blockchain, others exist, too, like Bitcoin.
 * Although most Blockchain implementations focus on monetary transactions, they support other concepts like [NFT](https://en.wikipedia.org/wiki/Non-fungible_token).
 * We believe Blockchain has a role to play in improving healthcare record storage due to its write-once, read-many time nature.
 * Some sample healthcare application ideas: 
@@ -14,7 +14,7 @@
 
 ## 1. Ethereum Docker Set Up
 ### 1a. Required Files
-Create a folder to keep all things related to Ethereum in one place. The under that folder create the following files with their contents:
+Create a folder to keep all things related to Ethereum in one place. Then, under that folder, create the following files with their contents:
 #### .env
 ```
 # The ID of Ethereum Network
@@ -178,7 +178,7 @@ Copy/paste the following API call in the Request Body, then hit the blue `Send` 
 ## 4. Get the latest block number
 This tells us how long the "chain" is in this network, which provides an idea of how many transactions have taken place.
 
-Just like step 2, but with this API call instead:
+Just like step 3, but with this API call instead:
 ```
 {
     "jsonrpc": "2.0",
@@ -191,7 +191,7 @@ Just like step 2, but with this API call instead:
 ## 5. Get the list of accounts
 Just like you can have multiple accounts with a bank, the same concept applies here, too. This call lists all known accounts
 
-Just like step 2, but with this API call instead:
+Just like step 3, but with this API call instead:
 ```
 {
     "jsonrpc": "2.0",
@@ -204,7 +204,7 @@ Just like step 2, but with this API call instead:
 ## 6. Get the balance of an account
 Just like checking the balance on your real-life bank account, except in Ethereum the balance is in [hexadecimal](https://www.google.com/search?q=hexadecimal+to+decimal+converter) number and in [wei unit](https://ethdocs.org/en/latest/ether.html).
 
-Just like step 2, but with this API call instead:
+Just like step 3, but with this API call instead:
 ```
 {
     "jsonrpc": "2.0",

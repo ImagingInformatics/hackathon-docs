@@ -3,13 +3,13 @@
 ## Why Slack?
 Slack combines the power of instant messaging with email-like record keeping and categorization. All messages are kept and are easy to find via search, just like email. Messages can even be grouped together in a thread as well. However, Slack does away with the clutter of email (signatures, disclaimers, etc) and even delays - all messages are delivered instantly.
 
-Slack has the concept of *rooms*, which can represent broad topics or teams, and then *threads* which are a specific topic/question along with replies in the same thread. Slack also suports "direct messages" (i.e. private 1:1 messaging).
+Slack has the concept of *rooms*, which can represent broad topics or teams, and then *threads* which are a specific topic/question along with replies in the same thread. Slack also supports "direct messages" (i.e. private 1:1 messaging).
 
 ## Slack Etiquette 
 ### Threads
 When replying to a message, reply via the threads feature to reduce visual clutter and make it easy for others to catch up on topics of importance to them with less scrolling.
 
-When you see a message you want to respond to, hover over that message and you'll see a set of actions availabe. The second one is the one you want here, which reads `Reply to thread`.
+When you see a message you want to respond to, hover over that message and you'll see a set of actions available. The second one is the one you want here, which reads `Reply to thread`.
 
 ### Reactions
 Speaking of hover actions, the first one allows you to respond to a message using emojis - yet another way Slack lets you say more with less 😉️
@@ -17,7 +17,7 @@ Speaking of hover actions, the first one allows you to respond to a message usin
 ### Channels
 Also referred to as rooms, each one has a purpose. For example, a given hackathon team can have a channel to discuss progress, so that would not be a place to bring up topics unrelated to that team. There are generic channels like `#general` for general topics, `#random` for random things (e.g. jokes and memes). Many slack spaces also utilize an `#introductions` channel for people to formally introduce themselves. 
 
-The hackathon also utilizes `#code-heroes` and `#domain-experts` channels for technical and clinical/workflow questions, respectiely. 
+The hackathon also utilizes `#code-heroes` and `#domain-experts` channels for technical and clinical/workflow questions, respectively.
 
 ### @here and @channel
 Use only when necessary, please. Both of which send notification to users who are online or all in the current channels, respectively. Ever heard of notification fatigue?!?
